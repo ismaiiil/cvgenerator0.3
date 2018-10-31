@@ -1,24 +1,18 @@
 package controller;
 
-import javafx.animation.Animation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import model.dao.jdbc.JDBCCertificationDao;
-import model.dao.jdbc.JDBCUserDao;
 import model.vo.Certification;
 import model.vo.User;
 
 import java.io.IOException;
-import java.net.URL;
-import java.util.ResourceBundle;
 
 public class UserRecordsDetailsController{
     @FXML
@@ -49,7 +43,7 @@ public class UserRecordsDetailsController{
                 new PropertyValueFactory<Certification,String>("year")
         );
         refreshTable(certification_table);
-        setcellwrapable(certification_column);
+        Column.setCellWrappable(certification_column);
 
     }
 
@@ -105,17 +99,6 @@ public class UserRecordsDetailsController{
 
     }
 
-    private void setcellwrapable(TableColumn tableColumn){
-        tableColumn.setCellFactory(tc -> {
-            TableCell<Animation.Status, String> cell = new TableCell<>();
-            Text text = new Text();
-            cell.setGraphic(text);
-            cell.setPrefHeight(Control.USE_COMPUTED_SIZE);
-            text.wrappingWidthProperty().bind(tableColumn.widthProperty());
-            text.textProperty().bind(cell.itemProperty());
-            return cell ;
-        });
-    }
 
     private void refreshTable(TableView tableView) {
         if(tableView == certification_table){

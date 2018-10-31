@@ -24,27 +24,7 @@ public class CertificationDetailsController {
     }
 
     public void save_btn_pressed(ActionEvent event) {
-        if(passedCertification.getId() == 0){
-            Certification certification = new Certification();
-            certification.setUser_id(passedCertification.getUser_id());
-            certification.setYear(Integer.parseInt(year_text.getText()));
-            certification.setQualification(certification_text.getText());
-            JDBCCertificationDao jdbcCertificationDao = new JDBCCertificationDao();
-            jdbcCertificationDao.insert(certification);
-            button_pressed = true;
-            closeWindow();
-
-        }else{
-            Certification certification = new Certification();
-            certification.setUser_id(passedCertification.getUser_id());
-            certification.setId(passedCertification.getId());
-            certification.setYear(Integer.parseInt(year_text.getText()));
-            certification.setQualification(certification_text.getText());
-            JDBCCertificationDao jdbcCertificationDao = new JDBCCertificationDao();
-            jdbcCertificationDao.update(certification);
-            button_pressed = true;
-            closeWindow();
-        }
+        commitCertification();
 
     }
 
@@ -56,6 +36,21 @@ public class CertificationDetailsController {
         }
     }
 
+    public void commitCertification(){
+        Certification certification = new Certification();
+        certification.setUser_id(passedCertification.getUser_id());
+        certification.setYear(Integer.parseInt(year_text.getText()));
+        certification.setQualification(certification_text.getText());
+        JDBCCertificationDao jdbcCertificationDao = new JDBCCertificationDao();
+        if(passedCertification.getId() == 0){
+            jdbcCertificationDao.insert(certification);
+        }else{
+            certification.setId(passedCertification.getId());
+            jdbcCertificationDao.update(certification);
+        }
+        button_pressed = true;
+        closeWindow();
+    }
     private void closeWindow() {
         Stage stage = (Stage) cancel_btn.getScene().getWindow();
         stage.close();

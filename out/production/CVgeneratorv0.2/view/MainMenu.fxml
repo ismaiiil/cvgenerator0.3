@@ -43,31 +43,11 @@
          <children>
             <TableView fx:id="table_object" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true">
                <columns>
-                  <TableColumn fx:id="col_id" prefWidth="75.0" text="Employee ID">
-                     <cellValueFactory>
-                        <PropertyValueFactory property="id" />
-                     </cellValueFactory>
-                  </TableColumn>
-                  <TableColumn fx:id="col_name" prefWidth="81.0" text="Name">
-                      <cellValueFactory>
-                          <PropertyValueFactory property="name" />
-                      </cellValueFactory>
-                  </TableColumn>
-                  <TableColumn fx:id="col_surname" prefWidth="69.0" text="Surname">
-                      <cellValueFactory>
-                          <PropertyValueFactory property="surname" />
-                      </cellValueFactory>
-                  </TableColumn>
-                  <TableColumn fx:id="col_email" prefWidth="168.0" text="email">
-                      <cellValueFactory>
-                          <PropertyValueFactory property="email" />
-                      </cellValueFactory>
-                  </TableColumn>
-                  <TableColumn fx:id="col_position" prefWidth="186.0" text="Position">
-                     <cellValueFactory>
-                        <PropertyValueFactory property="position" />
-                     </cellValueFactory>
-                  </TableColumn>
+                  <TableColumn fx:id="col_id" prefWidth="75.0" text="Employee ID"/>
+                  <TableColumn fx:id="col_name" prefWidth="81.0" text="Name"/>
+                  <TableColumn fx:id="col_surname" prefWidth="69.0" text="Surname"/>
+                  <TableColumn fx:id="col_email" prefWidth="168.0" text="email"/>
+                  <TableColumn fx:id="col_position" prefWidth="186.0" text="Position"/>
                </columns>
                <columnResizePolicy>
                   <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

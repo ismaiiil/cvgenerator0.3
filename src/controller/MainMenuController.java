@@ -1,6 +1,5 @@
 package controller;
 
-import javafx.animation.Animation;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +7,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
-import javafx.scene.text.Text;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.dao.jdbc.JDBCUserDao;
 import model.vo.User;
@@ -39,9 +38,25 @@ public class MainMenuController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        setcellwrapable(col_email);
-        setcellwrapable(col_surname);
+        col_id.setCellValueFactory(
+                new PropertyValueFactory<User,Integer>("id")
+        );
+        col_name.setCellValueFactory(
+                new PropertyValueFactory<User,String>("name")
+        );
+        col_surname.setCellValueFactory(
+                new PropertyValueFactory<User,String>("surname")
+        );
+        col_email.setCellValueFactory(
+                new PropertyValueFactory<User,String>("email")
+        );
+        col_position.setCellValueFactory(
+                new PropertyValueFactory<User,String>("position")
+        );
+        Column.setCellWrappable(col_email);
+        Column.setCellWrappable(col_surname);
         refreshTable();
+
 
     }
 
@@ -51,17 +66,6 @@ public class MainMenuController implements Initializable {
         table_object.setItems(jdbcUserDao.select());
     }
 
-    private void setcellwrapable(TableColumn tableColumn){
-        tableColumn.setCellFactory(tc -> {
-            TableCell<Animation.Status, String> cell = new TableCell<>();
-            Text text = new Text();
-            cell.setGraphic(text);
-            cell.setPrefHeight(Control.USE_COMPUTED_SIZE);
-            text.wrappingWidthProperty().bind(tableColumn.widthProperty());
-            text.textProperty().bind(cell.itemProperty());
-            return cell ;
-        });
-    }
 
     public void button_refresh_pressed(ActionEvent event) {
         refreshTable();
