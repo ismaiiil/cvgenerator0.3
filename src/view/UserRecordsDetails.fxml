@@ -14,7 +14,6 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<?import javafx.scene.control.cell.PropertyValueFactory?>
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.UserRecordsDetailsController">
    <top>
       <HBox prefHeight="49.0" prefWidth="600.0" BorderPane.alignment="CENTER">
@@ -48,11 +47,11 @@
                            <content>
                               <HBox prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <TableView prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" HBox.hgrow="ALWAYS">
+                                    <TableView fx:id="qualifications_table" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" HBox.hgrow="ALWAYS">
                                       <columns>
-                                        <TableColumn prefWidth="75.0" text="Year" />
-                                        <TableColumn prefWidth="75.0" text="Qualification" />
-                                          <TableColumn prefWidth="75.0" text="Diploma" />
+                                        <TableColumn fx:id="qualification_year_column" prefWidth="75.0" text="Year" />
+                                        <TableColumn fx:id="qualification_qualification_column" prefWidth="75.0" text="Qualification" />
+                                          <TableColumn fx:id="qualification_university_column" prefWidth="75.0" text="University" />
                                       </columns>
                                        <columnResizePolicy>
                                           <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -60,17 +59,17 @@
                                     </TableView>
                                     <VBox prefHeight="230.0" prefWidth="92.0">
                                        <children>
-                                          <Button mnemonicParsing="false" text="Add">
+                                          <Button fx:id="qualification_add_btn" mnemonicParsing="false" onAction="#qualification_add_btn_pressed" text="Add">
                                              <VBox.margin>
                                                 <Insets left="10.0" right="10.0" top="10.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button mnemonicParsing="false" text="Delete">
+                                          <Button fx:id="qualification_delete_btn" mnemonicParsing="false" onAction="#qualification_delete_btn_pressed" text="Delete">
                                              <VBox.margin>
                                                 <Insets left="10.0" right="10.0" top="10.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button layoutX="10.0" layoutY="35.0" mnemonicParsing="false" text="Edit">
+                                          <Button fx:id="qualification_edit_btn" layoutX="10.0" layoutY="35.0" mnemonicParsing="false" onAction="#qualification_edit_btn_pressed" text="Edit">
                                              <VBox.margin>
                                                 <Insets left="10.0" right="10.0" top="10.0" />
                                              </VBox.margin>
@@ -85,10 +84,10 @@
                            <content>
                               <HBox prefHeight="100.0" prefWidth="200.0">
                                  <children>
-                                    <TableView prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" HBox.hgrow="ALWAYS">
+                                    <TableView fx:id="masteries_table" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" HBox.hgrow="ALWAYS">
                                        <columns>
-                                          <TableColumn prefWidth="75.0" text="Technologies" />
-                                          <TableColumn prefWidth="75.0" text="Experience(years)" />
+                                          <TableColumn fx:id="technologies_column" prefWidth="75.0" text="Technologies" />
+                                          <TableColumn fx:id="experience_column" prefWidth="75.0" text="Experience(years)" />
                                        </columns>
                                        <columnResizePolicy>
                                           <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
@@ -96,17 +95,17 @@
                                     </TableView>
                                     <VBox prefHeight="230.0" prefWidth="92.0">
                                        <children>
-                                          <Button mnemonicParsing="false" text="Add">
+                                          <Button fx:id="masteries_add_btn" mnemonicParsing="false" text="Add">
                                              <VBox.margin>
                                                 <Insets left="10.0" right="10.0" top="10.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button mnemonicParsing="false" text="Delete">
+                                          <Button fx:id="masteries_delete_btn" mnemonicParsing="false" text="Delete">
                                              <VBox.margin>
                                                 <Insets left="10.0" right="10.0" top="10.0" />
                                              </VBox.margin>
                                           </Button>
-                                          <Button layoutX="10.0" layoutY="35.0" mnemonicParsing="false" text="Edit">
+                                          <Button fx:id="masteries_edit_btn" layoutX="10.0" layoutY="35.0" mnemonicParsing="false" text="Edit">
                                              <VBox.margin>
                                                 <Insets left="10.0" right="10.0" top="10.0" />
                                              </VBox.margin>
@@ -123,8 +122,8 @@
                                  <children>
                                     <TableView fx:id="certification_table" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" HBox.hgrow="ALWAYS">
                                        <columns>
-                                           <TableColumn fx:id="year_column" prefWidth="75.0" text="Year"/>
-                                           <TableColumn fx:id="certification_column" prefWidth="75.0" text="Certification"/>
+                                           <TableColumn fx:id="certification_year_column" prefWidth="75.0" text="Year" />
+                                           <TableColumn fx:id="certification_column" prefWidth="75.0" text="Certification" />
                                        </columns>
                                        <columnResizePolicy>
                                           <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

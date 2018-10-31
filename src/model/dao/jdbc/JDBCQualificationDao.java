@@ -43,7 +43,9 @@ public class JDBCQualificationDao implements QualificationDao {
         try{
             connection = ConnectionFactory.getConnection();
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM TEST.QUALIFICATIONS");
+            PreparedStatement preparedStatement = connection.prepareStatement("SELECT * FROM TEST.QUALIFICATIONS WHERE USER_ID = ?");
+            preparedStatement.setInt(1,user_id);
+            ResultSet resultSet = preparedStatement.executeQuery();
             Qualification qualification = null;
 
             while(resultSet.next()){
@@ -57,6 +59,7 @@ public class JDBCQualificationDao implements QualificationDao {
             }
             resultSet.close();
             statement.close();
+            preparedStatement.close();
         }catch (SQLException e){
             e.printStackTrace();
         }finally {

@@ -2,18 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/dictionaries/USER.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/controller/Column.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/controller/MasteryDetailsController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/controller/QualificationDetailsController.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/view/DetailsViews/QualificationDetails.fxml" />
+      <change beforePath="$PROJECT_DIR$/.idea/dictionaries/USER.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/USER.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/controller/CertificationDetailsController.class" afterPath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/controller/CertificationDetailsController.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/controller/MainMenuController.class" afterPath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/controller/MainMenuController.class" />
       <change beforePath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/controller/UserRecordsDetailsController.class" afterPath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/controller/UserRecordsDetailsController.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/model/dao/jdbc/JDBCMasteryDao.class" afterPath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/model/dao/jdbc/JDBCMasteryDao.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/model/dao/jdbc/JDBCQualificationDao.class" afterPath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/model/dao/jdbc/JDBCQualificationDao.class" />
       <change beforePath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/view/MainMenu.fxml" afterPath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/view/MainMenu.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/controller/CertificationDetailsController.java" afterPath="$PROJECT_DIR$/src/controller/CertificationDetailsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/controller/MainMenuController.java" afterPath="$PROJECT_DIR$/src/controller/MainMenuController.java" />
+      <change beforePath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/view/UserRecordsDetails.fxml" afterPath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/view/UserRecordsDetails.fxml" />
       <change beforePath="$PROJECT_DIR$/src/controller/UserRecordsDetailsController.java" afterPath="$PROJECT_DIR$/src/controller/UserRecordsDetailsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/model/dao/jdbc/JDBCMasteryDao.java" afterPath="$PROJECT_DIR$/src/model/dao/jdbc/JDBCMasteryDao.java" />
-      <change beforePath="$PROJECT_DIR$/src/view/MainMenu.fxml" afterPath="$PROJECT_DIR$/src/view/MainMenu.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/model/dao/jdbc/JDBCQualificationDao.java" afterPath="$PROJECT_DIR$/src/model/dao/jdbc/JDBCQualificationDao.java" />
+      <change beforePath="$PROJECT_DIR$/src/view/UserRecordsDetails.fxml" afterPath="$PROJECT_DIR$/src/view/UserRecordsDetails.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -130,30 +131,105 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserBasicDetailsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/UserBasicDetailsController.java">
+      <file leaf-file-name="UserRecordsDetailsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/UserRecordsDetailsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="869">
-              <caret line="66" column="30" lean-forward="false" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+            <state relative-caret-position="19">
+              <caret line="56" column="38" lean-forward="true" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="method#initUserId#0;class#UserRecordsDetailsController#0" expanded="false" />
+                <element signature="method#initQualificationTable#0;class#UserRecordsDetailsController#0" expanded="false" />
+                <element signature="method#initCertificationTable#0;class#UserRecordsDetailsController#0" expanded="false" />
+                <element signature="method#certification_add_btn_pressed#0;class#UserRecordsDetailsController#0" expanded="false" />
+                <element signature="method#certification_delete_btn_pressed#0;class#UserRecordsDetailsController#0" expanded="false" />
+                <element signature="method#certification_edit_btn_pressed#0;class#UserRecordsDetailsController#0" expanded="false" />
+                <element signature="method#refreshTable#0;class#UserRecordsDetailsController#0" expanded="false" />
+                <element signature="method#qualification_add_btn_pressed#0;class#UserRecordsDetailsController#0" expanded="false" />
+                <element signature="method#qualification_delete_btn_pressed#0;class#UserRecordsDetailsController#0" expanded="false" />
+                <element signature="method#qualification_edit_btn_pressed#0;class#UserRecordsDetailsController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MasteryDetailsController.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/controller/MasteryDetailsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="34">
+              <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MasteryDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/dao/interfaces/MasteryDao.java">
+      <file leaf-file-name="CertificationDetailsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/CertificationDetailsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="340">
+              <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QualificationDetailsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/QualificationDetailsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="291">
+              <caret line="53" column="15" lean-forward="false" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QualificationDetails.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/view/DetailsViews/QualificationDetails.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="262">
+              <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JDBCQualificationDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/dao/jdbc/JDBCQualificationDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="831">
+              <caret line="61" column="38" lean-forward="false" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <marker date="1541023653145" expanded="true" signature="596:689" ph="INSERT INTO TEST.QUALIFICATIONS... " />
+                <marker date="1541023653145" expanded="true" signature="1809:1860" ph="SELECT * FRO... QUALIFICATIONS" />
+                <marker date="1541023653145" expanded="true" signature="3229:3271" ph="DELETE FROM TEST.QUALIFICATIONS... " />
+                <marker date="1541023653145" expanded="true" signature="4047:4133" ph="UPDATE TEST.QUALIFICATIONS... " />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="QualificationDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/model/dao/interfaces/QualificationDao.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="102">
-              <caret line="7" column="46" lean-forward="false" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+              <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JDBCMasteryDao.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="JDBCMasteryDao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/model/dao/jdbc/JDBCMasteryDao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="971">
+            <state relative-caret-position="450">
               <caret line="115" column="60" lean-forward="false" selection-start-line="115" selection-start-column="60" selection-end-line="115" selection-end-column="60" />
               <folding>
                 <marker date="1541023195524" expanded="true" signature="560:645" ph="INSERT INTO TEST.MASTERIES... " />
@@ -165,80 +241,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JDBCCertificationDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/dao/jdbc/JDBCCertificationDao.java">
+      <file leaf-file-name="UserBasicDetailsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/controller/UserBasicDetailsController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="102" column="8" lean-forward="false" selection-start-line="102" selection-start-column="8" selection-end-line="128" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1540939202398" expanded="true" signature="596:683" ph="INSERT INTO TEST.CERTIFICATIONS... " />
-                <marker date="1540939202398" expanded="true" signature="1735:1786" ph="SELECT * FRO... CERTIFICATIONS" />
-                <marker date="1540939202398" expanded="true" signature="3067:3109" ph="DELETE FROM TEST.CERTIFICATIONS... " />
-                <marker date="1540939202398" expanded="true" signature="3882:3961" ph="UPDATE TEST.CERTIFICATIONS... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JDBCQualificationDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/model/dao/jdbc/JDBCQualificationDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="474">
-              <caret line="70" column="30" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="70" selection-end-column="30" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1540935639066" expanded="true" signature="596:689" ph="INSERT INTO TEST.QUALIFICATIONS... " />
-                <marker date="1540935639066" expanded="true" signature="1788:1821" ph="SELECT * FRO... QUALIFICATIONS" />
-                <marker date="1540935639066" expanded="true" signature="3034:3076" ph="DELETE FROM TEST.QUALIFICATIONS... " />
-                <marker date="1540935639066" expanded="true" signature="3852:3938" ph="UPDATE TEST.QUALIFICATIONS... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CertificationDetailsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/CertificationDetailsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="223">
-              <caret line="50" column="26" lean-forward="false" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Column.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Column.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="27" lean-forward="true" selection-start-line="9" selection-start-column="27" selection-end-line="9" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/controller/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="23" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainMenu.fxml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/view/MainMenu.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
-            <state />
-          </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="144">
-              <caret line="66" column="20" lean-forward="false" selection-start-line="66" selection-start-column="20" selection-end-line="66" selection-end-column="20" />
+            <state relative-caret-position="450">
+              <caret line="66" column="30" lean-forward="false" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -260,6 +267,7 @@
       <find>user_id</find>
       <find>qualification</find>
       <find>user</find>
+      <find>certification</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -310,20 +318,22 @@
         <option value="$PROJECT_DIR$/src/model/dao/interfaces/CertificationDao.java" />
         <option value="$PROJECT_DIR$/src/model/dao/interfaces/MasteryDao.java" />
         <option value="$PROJECT_DIR$/src/model/dao/interfaces/ReportDao.java" />
-        <option value="$PROJECT_DIR$/src/model/dao/jdbc/JDBCQualificationDao.java" />
         <option value="$PROJECT_DIR$/src/model/dao/jdbc/JDBCReportDao.java" />
         <option value="$PROJECT_DIR$/src/model/dao/jdbc/JDBCCertificationDao.java" />
-        <option value="$PROJECT_DIR$/src/view/UserRecordsDetails.fxml" />
         <option value="$PROJECT_DIR$/src/view/testtemplate.fxml" />
         <option value="$PROJECT_DIR$/src/view/DetailsViews/CertificationDetails.fxml" />
         <option value="$PROJECT_DIR$/src/controller/UserBasicDetailsController.java" />
         <option value="$PROJECT_DIR$/src/controller/Duplicate.java" />
-        <option value="$PROJECT_DIR$/src/controller/UserRecordsDetailsController.java" />
         <option value="$PROJECT_DIR$/src/controller/MainMenuController.java" />
         <option value="$PROJECT_DIR$/src/controller/Column.java" />
         <option value="$PROJECT_DIR$/src/controller/CertificationDetailsController.java" />
         <option value="$PROJECT_DIR$/src/view/MainMenu.fxml" />
         <option value="$PROJECT_DIR$/src/model/dao/jdbc/JDBCMasteryDao.java" />
+        <option value="$PROJECT_DIR$/src/model/dao/jdbc/JDBCQualificationDao.java" />
+        <option value="$PROJECT_DIR$/src/view/UserRecordsDetails.fxml" />
+        <option value="$PROJECT_DIR$/src/view/DetailsViews/QualificationDetails.fxml" />
+        <option value="$PROJECT_DIR$/src/controller/QualificationDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/controller/UserRecordsDetailsController.java" />
       </list>
     </option>
   </component>
@@ -541,7 +551,21 @@
               <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
               <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="DetailsViews" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -576,6 +600,9 @@
     <property name="extract.method.default.visibility" value="private" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\USER\Documents\Asc2 Internship\cvgenerator0.3\src\view\DetailsViews" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\USER\IdeaProjects\CVgeneratorv0.2\src\view" />
     </key>
@@ -729,7 +756,7 @@
       <workItem from="1540753976959" duration="33985000" />
       <workItem from="1540941405213" duration="16433000" />
       <workItem from="1541016312541" duration="426000" />
-      <workItem from="1541017059128" duration="3062000" />
+      <workItem from="1541017059128" duration="8808000" />
     </task>
     <task id="LOCAL-00001" summary="Crud user working">
       <created>1540936599095</created>
@@ -759,11 +786,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541017147598</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="mastery jdbc dao updated">
+      <created>1541023215289</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1541023215289</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="96502000" />
+    <option name="totallyTimeSpent" value="102248000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -793,6 +827,7 @@
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20045386" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19894099" sideWeight="0.49086758" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -811,7 +846,6 @@
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13251156" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -853,11 +887,12 @@
     <MESSAGE value="Crud user working" />
     <MESSAGE value="updated" />
     <MESSAGE value="test commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="test commit" />
+    <MESSAGE value="mastery jdbc dao updated" />
+    <option name="LAST_COMMIT_MESSAGE" value="mastery jdbc dao updated" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="4" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -866,49 +901,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/model/dao/jdbc/JDBCUserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="969">
-          <caret line="61" column="23" lean-forward="false" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="das://table:/42ee4b4b/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/TEST.USERS" />
-    <entry file="file://$PROJECT_DIR$/src/model/dao/interfaces/UserDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/vo/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="2" selection-end-line="13" selection-end-column="7" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/MainMenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="33" lean-forward="false" selection-start-line="2" selection-start-column="33" selection-end-line="2" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/MainMenu.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -986,13 +978,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/vo/Qualification.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/vo/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1014,38 +999,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/dao/interfaces/QualificationDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/dao/interfaces/CertificationDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/dao/interfaces/ReportDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/model/vo/Mastery.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/dao/jdbc/JDBCReportDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="52" lean-forward="false" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
         </state>
       </provider>
     </entry>
@@ -1059,33 +1016,11 @@
     <entry file="das://table:/42ee4b4b/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/TEST.QUALIFICATIONS" />
     <entry file="file://$PROJECT_DIR$/src/view/testtemplate.fxml" />
     <entry file="das://table:/42ee4b4b/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/TEST.CERTIFICATIONS" />
-    <entry file="file://$PROJECT_DIR$/src/view/UserRecordsDetails.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="126" column="123" lean-forward="false" selection-start-line="126" selection-start-column="123" selection-end-line="126" selection-end-column="123" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://table:/42ee4b4b/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/TEST.USERS" />
     <entry file="file://$PROJECT_DIR$/src/model/vo/Certification.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
           <caret line="36" column="16" lean-forward="false" selection-start-line="36" selection-start-column="16" selection-end-line="36" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/view/DetailsViews/CertificationDetails.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="833">
-          <caret line="76" column="52" lean-forward="false" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1097,28 +1032,6 @@
         <state relative-caret-position="433">
           <caret line="131" column="41" lean-forward="true" selection-start-line="131" selection-start-column="41" selection-end-line="131" selection-end-column="41" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/UserRecordsDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-165">
-          <caret line="38" column="8" lean-forward="false" selection-start-line="38" selection-start-column="8" selection-end-line="40" selection-end-column="10" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#838#839#0" expanded="true" />
-            <element signature="e#887#888#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/CertificationDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="50" column="26" lean-forward="false" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="26" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1140,16 +1053,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/MainMenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="249">
-          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/view/MainMenu.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -1161,10 +1064,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/UserBasicDetailsController.java">
+    <entry file="file://$PROJECT_DIR$/src/model/dao/jdbc/JDBCCertificationDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="869">
-          <caret line="66" column="30" lean-forward="false" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+        <state relative-caret-position="-845">
+          <caret line="46" column="12" lean-forward="true" selection-start-line="46" selection-start-column="12" selection-end-line="46" selection-end-column="67" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1540939202398" expanded="true" signature="596:683" ph="INSERT INTO TEST.CERTIFICATIONS... " />
+            <marker date="1540939202398" expanded="true" signature="1735:1786" ph="SELECT * FRO... CERTIFICATIONS" />
+            <marker date="1540939202398" expanded="true" signature="3067:3109" ph="DELETE FROM TEST.CERTIFICATIONS... " />
+            <marker date="1540939202398" expanded="true" signature="3882:3961" ph="UPDATE TEST.CERTIFICATIONS... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/dao/interfaces/CertificationDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="59" lean-forward="false" selection-start-line="7" selection-start-column="59" selection-end-line="7" selection-end-column="59" />
           <folding />
         </state>
       </provider>
@@ -1177,37 +1094,111 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/dao/jdbc/JDBCQualificationDao.java">
+    <entry file="file://$PROJECT_DIR$/src/model/dao/interfaces/ReportDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="474">
-          <caret line="70" column="30" lean-forward="true" selection-start-line="40" selection-start-column="8" selection-end-line="70" selection-end-column="30" />
+        <state relative-caret-position="102">
+          <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/dao/jdbc/JDBCReportDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="52" lean-forward="false" selection-start-line="13" selection-start-column="52" selection-end-line="13" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/MainMenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="249">
+          <caret line="32" column="25" lean-forward="false" selection-start-line="32" selection-start-column="25" selection-end-line="32" selection-end-column="25" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1540935639066" expanded="true" signature="596:689" ph="INSERT INTO TEST.QUALIFICATIONS... " />
-            <marker date="1540935639066" expanded="true" signature="1788:1821" ph="SELECT * FRO... QUALIFICATIONS" />
-            <marker date="1540935639066" expanded="true" signature="3034:3076" ph="DELETE FROM TEST.QUALIFICATIONS... " />
-            <marker date="1540935639066" expanded="true" signature="3852:3938" ph="UPDATE TEST.QUALIFICATIONS... " />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/model/dao/jdbc/JDBCCertificationDao.java">
+    <entry file="das://table:/9028f4c0/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/TEST.MASTERIES">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/9028f4c0/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/TEST.CERTIFICATIONS">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/DetailsViews/CertificationDetails.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="102" column="8" lean-forward="false" selection-start-line="102" selection-start-column="8" selection-end-line="128" selection-end-column="9" />
+        <state relative-caret-position="421">
+          <caret line="76" column="52" lean-forward="false" selection-start-line="76" selection-start-column="52" selection-end-line="76" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/DetailsViews/QualificationDetails.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="262">
+          <caret line="21" column="35" lean-forward="true" selection-start-line="21" selection-start-column="35" selection-end-line="21" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/view/UserRecordsDetails.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="71" column="160" lean-forward="true" selection-start-line="71" selection-start-column="160" selection-end-line="71" selection-end-column="160" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="das://table:/9028f4c0/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/TEST.QUALIFICATIONS">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/dao/jdbc/JDBCQualificationDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="831">
+          <caret line="61" column="38" lean-forward="false" selection-start-line="61" selection-start-column="38" selection-end-line="61" selection-end-column="38" />
           <folding>
             <element signature="imports" expanded="true" />
-            <marker date="1540939202398" expanded="true" signature="596:683" ph="INSERT INTO TEST.CERTIFICATIONS... " />
-            <marker date="1540939202398" expanded="true" signature="1735:1786" ph="SELECT * FRO... CERTIFICATIONS" />
-            <marker date="1540939202398" expanded="true" signature="3067:3109" ph="DELETE FROM TEST.CERTIFICATIONS... " />
-            <marker date="1540939202398" expanded="true" signature="3882:3961" ph="UPDATE TEST.CERTIFICATIONS... " />
+            <marker date="1541023653145" expanded="true" signature="596:689" ph="INSERT INTO TEST.QUALIFICATIONS... " />
+            <marker date="1541023653145" expanded="true" signature="1809:1860" ph="SELECT * FRO... QUALIFICATIONS" />
+            <marker date="1541023653145" expanded="true" signature="3229:3271" ph="DELETE FROM TEST.QUALIFICATIONS... " />
+            <marker date="1541023653145" expanded="true" signature="4047:4133" ph="UPDATE TEST.QUALIFICATIONS... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/dao/interfaces/QualificationDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="52" lean-forward="false" selection-start-line="7" selection-start-column="52" selection-end-line="7" selection-end-column="52" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/model/dao/jdbc/JDBCMasteryDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="971">
+        <state relative-caret-position="450">
           <caret line="115" column="60" lean-forward="false" selection-start-line="115" selection-start-column="60" selection-end-line="115" selection-end-column="60" />
           <folding>
             <marker date="1541023195524" expanded="true" signature="560:645" ph="INSERT INTO TEST.MASTERIES... " />
@@ -1215,6 +1206,70 @@
             <marker date="1541023195524" expanded="true" signature="2934:2971" ph="DELETE FROM TEST.MASTERIES... " />
             <marker date="1541023195524" expanded="true" signature="3726:3803" ph="UPDATE TEST.MASTERIES... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/UserBasicDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="66" column="30" lean-forward="false" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/QualificationDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="53" column="15" lean-forward="false" selection-start-line="53" selection-start-column="15" selection-end-line="53" selection-end-column="15" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/model/vo/Qualification.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/CertificationDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="340">
+          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/UserRecordsDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="56" column="38" lean-forward="true" selection-start-line="56" selection-start-column="38" selection-end-line="56" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#initUserId#0;class#UserRecordsDetailsController#0" expanded="false" />
+            <element signature="method#initQualificationTable#0;class#UserRecordsDetailsController#0" expanded="false" />
+            <element signature="method#initCertificationTable#0;class#UserRecordsDetailsController#0" expanded="false" />
+            <element signature="method#certification_add_btn_pressed#0;class#UserRecordsDetailsController#0" expanded="false" />
+            <element signature="method#certification_delete_btn_pressed#0;class#UserRecordsDetailsController#0" expanded="false" />
+            <element signature="method#certification_edit_btn_pressed#0;class#UserRecordsDetailsController#0" expanded="false" />
+            <element signature="method#refreshTable#0;class#UserRecordsDetailsController#0" expanded="false" />
+            <element signature="method#qualification_add_btn_pressed#0;class#UserRecordsDetailsController#0" expanded="false" />
+            <element signature="method#qualification_delete_btn_pressed#0;class#UserRecordsDetailsController#0" expanded="false" />
+            <element signature="method#qualification_edit_btn_pressed#0;class#UserRecordsDetailsController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/controller/MasteryDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
