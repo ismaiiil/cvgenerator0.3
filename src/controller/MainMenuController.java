@@ -90,6 +90,7 @@ public class MainMenuController implements Initializable {
             stage.showAndWait();
             if(userBasicDetailsController.button_pressed){
                 refreshTable();
+
             }
         } catch (IOException e) {
             e.printStackTrace();
