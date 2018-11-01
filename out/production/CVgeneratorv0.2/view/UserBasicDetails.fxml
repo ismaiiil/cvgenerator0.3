@@ -24,11 +24,6 @@
                   <Insets left="5.0" right="5.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="next_btn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#next_btn_pressed" prefHeight="25.0" prefWidth="68.0" text="Next">
-               <HBox.margin>
-                  <Insets left="5.0" right="5.0" />
-               </HBox.margin>
-            </Button>
          </children>
       </HBox>
    </bottom>

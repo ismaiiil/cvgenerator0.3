@@ -4,9 +4,9 @@
     <root id="1"/>
     <schema id="2" parent="1" name="TEST">
       <ObjectId>112</ObjectId>
-      <IntrospectionTimestamp>2018-10-10.09:44:50</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-10-12.14:34:04</IntrospectionTimestamp>
       <CreatedTimestamp>2018-10-09.01:54:19</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-10.09:44:48</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-10-12.14:34:03</ModifiedTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -184,31 +184,31 @@
     <table id="50" parent="2" name="CERTIFICATIONS">
       <ObjectId>73937</ObjectId>
       <CreatedTimestamp>2018-10-09.18:31:01</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-09.18:36:34</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-10-12.14:32:48</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="51" parent="2" name="MASTERIES">
       <ObjectId>73934</ObjectId>
       <CreatedTimestamp>2018-10-09.18:21:28</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-09.18:37:41</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-10-12.14:32:31</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="52" parent="2" name="QUALIFICATIONS">
       <ObjectId>73940</ObjectId>
       <CreatedTimestamp>2018-10-09.18:34:17</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-09.18:38:22</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-10-12.14:32:18</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="53" parent="2" name="REPORTS">
       <ObjectId>73944</ObjectId>
       <CreatedTimestamp>2018-10-09.18:44:31</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-09.18:45:07</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-10-12.14:33:27</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <table id="54" parent="2" name="USERS">
       <ObjectId>73898</ObjectId>
       <CreatedTimestamp>2018-10-09.04:53:36</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-10.09:44:48</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-10-12.14:34:03</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
     <column id="55" parent="50" name="ID">
@@ -224,7 +224,8 @@
     </column>
     <column id="57" parent="50" name="QUALIFICATION">
       <Position>3</Position>
-      <DataType>VARCHAR2(20)|0</DataType>
+      <DataType>VARCHAR2(200)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
     <column id="58" parent="50" name="USER_ID">
       <Position>4</Position>
@@ -262,8 +263,9 @@
     </column>
     <column id="63" parent="51" name="TECHNOLOGY">
       <Position>2</Position>
-      <DataType>VARCHAR2(100)|0</DataType>
+      <DataType>VARCHAR2(200)|0</DataType>
       <NotNull>1</NotNull>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
     <column id="64" parent="51" name="EXPERIENCE">
       <Position>3</Position>
@@ -309,11 +311,13 @@
     </column>
     <column id="71" parent="52" name="DIPLOMA">
       <Position>3</Position>
-      <DataType>VARCHAR2(20)|0</DataType>
+      <DataType>VARCHAR2(200)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
     <column id="72" parent="52" name="UNIVERSITY">
       <Position>4</Position>
-      <DataType>VARCHAR2(20)|0</DataType>
+      <DataType>VARCHAR2(200)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
     <column id="73" parent="52" name="USER_ID">
       <Position>5</Position>
@@ -351,7 +355,8 @@
     </column>
     <column id="78" parent="53" name="COUNTRY">
       <Position>2</Position>
-      <DataType>VARCHAR2(20)|0</DataType>
+      <DataType>VARCHAR2(100)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
     <column id="79" parent="53" name="YEAR">
       <Position>3</Position>
@@ -359,7 +364,8 @@
     </column>
     <column id="80" parent="53" name="DETAILS">
       <Position>4</Position>
-      <DataType>VARCHAR2(1000)|0</DataType>
+      <DataType>VARCHAR2(4000)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
     <column id="81" parent="53" name="USER_ID">
       <Position>5</Position>
@@ -397,15 +403,17 @@
     </column>
     <column id="86" parent="54" name="NAME">
       <Position>2</Position>
-      <DataType>VARCHAR2(20)|0</DataType>
+      <DataType>VARCHAR2(100)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
     <column id="87" parent="54" name="SURNAME">
       <Position>3</Position>
-      <DataType>VARCHAR2(20)|0</DataType>
+      <DataType>VARCHAR2(100)|0</DataType>
+      <DefaultExpression>NULL</DefaultExpression>
     </column>
     <column id="88" parent="54" name="EMAIL">
       <Position>4</Position>
-      <DataType>VARCHAR2(2000)|0</DataType>
+      <DataType>VARCHAR2(200)|0</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
     <column id="89" parent="54" name="POSITION">
