@@ -3,7 +3,7 @@ package model.vo;
 public class Report {
     private int id;
     private String country;
-    private String Year;
+    private int Year;
     private String details;
     private int user_id;
 
@@ -23,11 +23,11 @@ public class Report {
         this.country = country;
     }
 
-    public String getYear() {
+    public int getYear() {
         return Year;
     }
 
-    public void setYear(String year) {
+    public void setYear(int year) {
         Year = year;
     }
 

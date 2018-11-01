@@ -9,10 +9,10 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import model.dao.jdbc.JDBCCertificationDao;
+import model.dao.jdbc.JDBCMasteryDao;
 import model.dao.jdbc.JDBCQualificationDao;
-import model.vo.Certification;
-import model.vo.Qualification;
-import model.vo.User;
+import model.dao.jdbc.JDBCReportDao;
+import model.vo.*;
 
 import java.io.IOException;
 
@@ -49,21 +49,55 @@ public class UserRecordsDetailsController{
     public TableColumn qualification_university_column;
 
 
+    //Reports TiltedPane
+    @FXML
+    public TableView reports_table;
+    public TableColumn country_column;
+    public TableColumn reports_year_column;
+    public TableColumn projectdetails_column;
+    public Button report_add_btn;
+    public Button report_delete_btn;
+    public Button report_edit_btn;
+
+    @FXML
+    public Button finish_button;
+
+
     private int user_id;
 
     public void button_refresh_pressed(ActionEvent event) {
         refreshTable(certification_table);
         refreshTable(qualifications_table);
         refreshTable(masteries_table);
+        refreshTable(reports_table);
     }
-
 
     public void initUserId(User user){
         user_id = user.getId();
 
         initCertificationTable();
         initQualificationTable();
+        initMasteryTable();
+        initReportTable();
 
+
+    }
+
+    private void refreshTable(TableView tableView) {
+        if(tableView == certification_table){
+            JDBCCertificationDao jdbcCertificationDao = new JDBCCertificationDao();
+            certification_table.setItems(jdbcCertificationDao.select(user_id));
+        }
+        else if(tableView == qualifications_table){
+            JDBCQualificationDao jdbcQualificationDao = new JDBCQualificationDao();
+            qualifications_table.setItems(jdbcQualificationDao.select(user_id));
+        }else if(tableView == masteries_table){
+            JDBCMasteryDao jdbcMasteryDao = new JDBCMasteryDao();
+            masteries_table.setItems(jdbcMasteryDao.select(user_id));
+        }else if(tableView == reports_table){
+            JDBCReportDao jdbcReportDao = new JDBCReportDao();
+            reports_table.setItems(jdbcReportDao.select(user_id));
+        }
 
     }
 
@@ -93,6 +127,30 @@ public class UserRecordsDetailsController{
         Column.setCellWrappable(certification_column);
     }
 
+    private void initMasteryTable(){
+        experience_column.setCellValueFactory(
+                new PropertyValueFactory<Mastery,Integer>("experience")
+        );
+        technologies_column.setCellValueFactory(
+                new PropertyValueFactory<Mastery,String>("technology")
+        );
+        refreshTable(masteries_table);
+        Column.setCellWrappable(technologies_column);
+    }
+
+    private void initReportTable(){
+        reports_year_column.setCellValueFactory(
+                new PropertyValueFactory<Report,Integer>("Year")
+        );
+        country_column.setCellValueFactory(
+                new PropertyValueFactory<Report,String>("country")
+        );
+        projectdetails_column.setCellValueFactory(
+                new PropertyValueFactory<Report,String>("details")
+        );
+        Column.setCellWrappable(projectdetails_column);
+        refreshTable(reports_table);
+    }
 
     public void certification_add_btn_pressed(ActionEvent event) {
         Certification certification = new Certification();
@@ -145,20 +203,6 @@ public class UserRecordsDetailsController{
 
     }
 
-
-    private void refreshTable(TableView tableView) {
-        if(tableView == certification_table){
-            JDBCCertificationDao jdbcCertificationDao = new JDBCCertificationDao();
-            certification_table.setItems(jdbcCertificationDao.select(user_id));
-        }
-        else if(tableView == qualifications_table){
-            JDBCQualificationDao jdbcQualificationDao = new JDBCQualificationDao();
-            qualifications_table.setItems(jdbcQualificationDao.select(user_id));
-        }
-
-    }
-
-
     public void qualification_add_btn_pressed(ActionEvent event) {
         Qualification qualification = new Qualification();
         qualification.setUser_id(user_id);
@@ -208,5 +252,111 @@ public class UserRecordsDetailsController{
             e.printStackTrace();
         }
 
+    }
+
+    public void masteries_add_btn_pressed(ActionEvent event) {
+        Mastery mastery = new Mastery();
+        mastery.setUser_id(user_id);
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("../view/DetailsViews/MasteryDetails.fxml"));
+        try {
+            Parent root2 = (Parent) fxmlloader.load();
+            MasteryDetailsController masteryDetailsController = fxmlloader.getController();
+            masteryDetailsController.init_mastery(mastery);
+            Stage stage = new Stage();
+            stage.setTitle("Adding a mastery:");
+            stage.setScene(new Scene(root2));
+            //stage.setResizable(false);
+            stage.showAndWait();
+            if(masteryDetailsController.button_pressed){
+                refreshTable(masteries_table);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void masteries_delete_btn_pressed(ActionEvent event) {
+        Mastery mastery = (Mastery) masteries_table.getSelectionModel().getSelectedItem();
+        JDBCMasteryDao jdbcMasteryDao = new JDBCMasteryDao();
+        jdbcMasteryDao.delete(mastery.getId());
+        refreshTable(masteries_table);
+    }
+
+    public void masteries_edit_btn_pressed(ActionEvent event) {
+        Mastery mastery = (Mastery) masteries_table.getSelectionModel().getSelectedItem();
+        mastery.setUser_id(user_id);
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("../view/DetailsViews/MasteryDetails.fxml"));
+        try {
+            Parent root2 = (Parent) fxmlloader.load();
+            MasteryDetailsController masteryDetailsController = fxmlloader.getController();
+            masteryDetailsController.init_mastery(mastery);
+            Stage stage = new Stage();
+            stage.setTitle("editing mastery:");
+            stage.setScene(new Scene(root2));
+            //stage.setResizable(false);
+            stage.showAndWait();
+            if(masteryDetailsController.button_pressed){
+                refreshTable(masteries_table);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void report_add_btn_pressed(ActionEvent event) {
+        Report report = new Report();
+        report.setUser_id(user_id);
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("../view/DetailsViews/ReportDetails.fxml"));
+        try {
+            Parent root2 = (Parent) fxmlloader.load();
+            ReportDetailsController reportDetailsController = fxmlloader.getController();
+            reportDetailsController.init_report(report);
+            Stage stage = new Stage();
+            stage.setTitle("Adding a report:");
+            stage.setScene(new Scene(root2));
+            //stage.setResizable(false);
+            stage.showAndWait();
+            if(reportDetailsController.button_pressed){
+                refreshTable(reports_table);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void report_delete_btn_pressed(ActionEvent event) {
+        Report report = (Report) reports_table.getSelectionModel().getSelectedItem();
+        JDBCReportDao jdbcReportDao = new JDBCReportDao();
+        jdbcReportDao.delete(report.getId());
+        refreshTable(reports_table);
+    }
+
+    public void report_edit_btn_pressed(ActionEvent event) {
+        Report report = (Report) reports_table.getSelectionModel().getSelectedItem();
+        report.setUser_id(user_id);
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("../view/DetailsViews/ReportDetails.fxml"));
+        try {
+            Parent root2 = (Parent) fxmlloader.load();
+            ReportDetailsController reportDetailsController = fxmlloader.getController();
+            reportDetailsController.init_report(report);
+            Stage stage = new Stage();
+            stage.setTitle("editing a report:");
+            stage.setScene(new Scene(root2));
+            //stage.setResizable(false);
+            stage.showAndWait();
+            if(reportDetailsController.button_pressed){
+                refreshTable(reports_table);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void finish_button_pressed(ActionEvent event) {
+        closeWindow();
+    }
+    private void closeWindow(){
+        Stage stage = (Stage) finish_button.getScene().getWindow();
+        stage.close();
     }
 }
