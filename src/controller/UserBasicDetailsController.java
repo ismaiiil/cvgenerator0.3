@@ -10,7 +10,6 @@ import model.vo.User;
 public class UserBasicDetailsController {
     public Button cancel_btn;
     public Button save_btn;
-    public Button next_btn;
     public TextField name_text;
     public TextField surname_text;
     public TextField email_text;
@@ -62,10 +61,6 @@ public class UserBasicDetailsController {
         }
     }
 
-    public void next_btn_pressed(ActionEvent event) {
-        commitUser();
-        button_pressed = true;
-    }
 
 
 
