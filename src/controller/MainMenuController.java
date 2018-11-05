@@ -11,12 +11,8 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
-import model.dao.jdbc.JDBCCertificationDao;
-import model.dao.jdbc.JDBCQualificationDao;
-import model.dao.jdbc.JDBCUserDao;
-import model.vo.Certification;
-import model.vo.Qualification;
-import model.vo.User;
+import model.dao.jdbc.*;
+import model.vo.*;
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -162,27 +158,34 @@ public class MainMenuController implements Initializable {
 
     }
 
+    private Font bold_font(int size){
+        return  new Font(Font.FontFamily.HELVETICA,size,Font.BOLD);
+    }
+    private Font underline_font(int size){
+        return new Font(Font.FontFamily.HELVETICA,size,Font.UNDERLINE);
+    }
+    private Font normal_font(int size){
+        return  new Font(Font.FontFamily.HELVETICA,size,Font.NORMAL);
+    }
+
     public void generate_cv_button_pressed(ActionEvent event) {
         User user = (User) table_object.getSelectionModel().getSelectedItem();
         if (user!=null){
-            Document document = new Document();
+            float left = 10;
+            float right = 10;
+            float top = 60;
+            float bottom = 60;
+            Document document = new Document(PageSize.A4,left,right,top,bottom);
             try{
-                Font bold_size10 = new Font(Font.FontFamily.HELVETICA,10,Font.BOLD);
-                Font bold_size9 = new Font(Font.FontFamily.HELVETICA,9,Font.BOLD);
-                Font bold_size14 = new Font(Font.FontFamily.HELVETICA,14,Font.BOLD);
-                Font bold_size8 = new Font(Font.FontFamily.HELVETICA,8,Font.BOLD);
-                Font underline_size8 = new Font(Font.FontFamily.HELVETICA,8,Font.UNDERLINE);
-                Font underline_size9 = new Font(Font.FontFamily.HELVETICA,9,Font.UNDERLINE);
-                Font normal_size10 =new Font(Font.FontFamily.HELVETICA,10,Font.NORMAL);
-                Font normal_size9 =new Font(Font.FontFamily.HELVETICA,9,Font.NORMAL);
 
                 PdfWriter pdfWriter = PdfWriter.getInstance(document,new FileOutputStream(user.getName()+" "+
                         user.getSurname()+" CV "+".pdf"));
                 document.open();
+                document.setMargins(left, right, top, bottom);
                 PdfPTable mainTable = new PdfPTable(2);
                 mainTable.setWidthPercentage(100.0f);
                 mainTable.setWidths(new int[]{2,5});
-                mainTable.setKeepTogether(false);
+                //mainTable.setKeepTogether(false);
                 // left side first table
                 PdfPCell firstTableCell = new PdfPCell();
                 firstTableCell.setBorder(PdfPCell.NO_BORDER);
@@ -192,41 +195,37 @@ public class MainMenuController implements Initializable {
 
                 //add Logo
                 Image image = Image.getInstance("src/resources/logo.png");
+                image.scaleToFit(90,90);
+                image.setAlignment(Element.ALIGN_CENTER);
                 firstTableCell.addElement(image);
 
-                userDetails(user, bold_size10, underline_size8, mainTable, firstTableCell, firstTable);
+                userDetails(user, bold_font(10), underline_font(8), mainTable, firstTableCell, firstTable);
 
                 // Second table
                 PdfPCell secondTableCell = new PdfPCell();
                 secondTableCell.setBorder(PdfPCell.NO_BORDER);
                 //PdfPTable secondTable = new PdfPTable(1);
                 //......... add some cells here ...........
-                //some kind of margin from top, basivally 3 newlines
-                //secondTableCell.addElement(new Paragraph("\n \n \n"));
 
                 //certifiation title
-                Paragraph certTitle = new Paragraph("CERTIFICATION",bold_size14);
-                certTitle.setAlignment(Element.ALIGN_CENTER);
-                secondTableCell.addElement(certTitle);
+                createTitle(secondTableCell, "CERTIFICATION");
 
                 //certification table init
                 PdfPTable certificationTable = new PdfPTable(2);
                 certificationTable.setWidths(new int[]{1, 8});
 
                 //certification table headers
-                PdfPCell certyearCell = new PdfPCell(new Paragraph("Year",bold_size10));
-                certyearCell.setBackgroundColor(BaseColor.LIGHT_GRAY);
-                certificationTable.addCell(certyearCell);
+                addHeader(certificationTable);
 
-                PdfPCell qualificationCell = new PdfPCell(new Paragraph("Qualification/Diploma",bold_size10));
+                PdfPCell qualificationCell = new PdfPCell(new Paragraph("Qualification/Diploma",bold_font(10)));
                 qualificationCell.setBackgroundColor(BaseColor.LIGHT_GRAY);
                 certificationTable.addCell(qualificationCell);
 
                 //table content
                 JDBCCertificationDao jdbcCertificationDao = new JDBCCertificationDao();
                 for (Certification certification:jdbcCertificationDao.select(user.getId())) {
-                    certificationTable.addCell(new Paragraph(String.valueOf(certification.getYear()),normal_size9));
-                    certificationTable.addCell(new Paragraph(certification.getQualification(),normal_size9));
+                    certificationTable.addCell(new Paragraph(String.valueOf(certification.getYear()),normal_font(9)));
+                    certificationTable.addCell(new Paragraph(certification.getQualification(),normal_font(9)));
                 }
 
                 //IMPORTANT add the table as an element to the 2nd table cell of the main celll
@@ -234,20 +233,18 @@ public class MainMenuController implements Initializable {
                 secondTableCell.addElement(new Paragraph("\n"));
 
                 //qualification title
-                Paragraph qualTitle = new Paragraph("QUALIFICATION",bold_size14);
-                qualTitle.setAlignment(Element.ALIGN_CENTER);
-                secondTableCell.addElement(qualTitle);
+                createTitle(secondTableCell, "QUALIFICATION");
 
                 //qualification table init
                 PdfPTable qualificationTable = new PdfPTable(2);
                 qualificationTable.setWidths(new int[]{1, 8});
 
                 //qualification table headers
-                PdfPCell qualYearCell = new PdfPCell(new Paragraph("Year",bold_size10));
+                PdfPCell qualYearCell = new PdfPCell(new Paragraph("Year",bold_font(10)));
                 qualYearCell.setBackgroundColor(BaseColor.LIGHT_GRAY);
                 qualificationTable.addCell(qualYearCell);
 
-                PdfPCell qualdiplomaCell = new PdfPCell(new Paragraph("Qualification/Diploma",bold_size10));
+                PdfPCell qualdiplomaCell = new PdfPCell(new Paragraph("Qualification/Diploma",bold_font(10)));
                 qualdiplomaCell.setBackgroundColor(BaseColor.LIGHT_GRAY);
                 qualificationTable.addCell(qualdiplomaCell);
 
@@ -255,30 +252,104 @@ public class MainMenuController implements Initializable {
                 JDBCQualificationDao jdbcQualificationDao = new JDBCQualificationDao();
                 for (Qualification qualification:jdbcQualificationDao.select(user.getId())){
                     PdfPCell yearCell = new PdfPCell();
-                    yearCell.addElement(new Paragraph(String.valueOf(qualification.getYear()),normal_size9));
+                    yearCell.addElement(new Paragraph(String.valueOf(qualification.getYear()),normal_font(9)));
                     yearCell.setHorizontalAlignment(Element.ALIGN_CENTER);
                     qualificationTable.addCell(yearCell);
                     PdfPCell diplomaCell = new PdfPCell();
-                    diplomaCell.addElement(new Paragraph(qualification.getDiploma(),bold_size9));
-                    diplomaCell.addElement(new Paragraph(qualification.getUniversity(),normal_size9));
+                    diplomaCell.addElement(new Paragraph(qualification.getDiploma(),bold_font(9)));
+                    diplomaCell.addElement(new Paragraph(qualification.getUniversity(),normal_font(9)));
                     diplomaCell.setHorizontalAlignment(Element.ALIGN_CENTER);
                     diplomaCell.setVerticalAlignment(Element.ALIGN_CENTER);
                     qualificationTable.addCell(diplomaCell);
                 }
                 //IMPORTANT moving this will cause tables to be placed at the wrong position
-                qualificationTable.setKeepTogether(false);
+                //qualificationTable.setKeepTogether(false);
                 secondTableCell.addElement(qualificationTable);
-                secondTableCell.addElement(qualificationTable);
-                secondTableCell.addElement(qualificationTable);
-                secondTableCell.addElement(qualificationTable);
-                secondTableCell.addElement(qualificationTable);
-                secondTableCell.addElement(qualificationTable);
-                secondTableCell.addElement(qualificationTable);
-                secondTableCell.addElement(qualificationTable);
-                secondTableCell.addElement(qualificationTable);
+                secondTableCell.addElement(new Paragraph("\n"));
 
+                //Masteries Title
+                createTitle(secondTableCell, "MASTERIES");
+
+                //Mastery table init
+                PdfPTable masteryTable = new PdfPTable(2);
+                masteryTable.setWidths(new int[]{1, 1});
+
+                //masteries table headers
+                PdfPCell masteryTechCell = new PdfPCell(new Paragraph("Technologies",bold_font(10)));
+                masteryTechCell.setBackgroundColor(BaseColor.LIGHT_GRAY);
+                masteryTechCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                masteryTable.addCell(masteryTechCell);
+
+                PdfPCell masteryYearsCell = new PdfPCell(new Paragraph("Years of experience",bold_font(10)));
+                masteryYearsCell.setBackgroundColor(BaseColor.LIGHT_GRAY);
+                masteryYearsCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                masteryTable.addCell(masteryYearsCell);
+
+                //masteries add data
+                JDBCMasteryDao jdbcMasteryDao = new JDBCMasteryDao();
+                for (Mastery mastery : jdbcMasteryDao.select(user.getId())) {
+                    PdfPCell techcell = new PdfPCell(new Paragraph(mastery.getTechnology(),normal_font(10)));
+                    techcell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    techcell.setVerticalAlignment(Element.ALIGN_CENTER);
+                    masteryTable.addCell(techcell);
+
+                    PdfPCell yearCell = new PdfPCell(new Paragraph(String.valueOf(mastery.getExperience()),normal_font(9)));
+                    yearCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    yearCell.setVerticalAlignment(Element.ALIGN_CENTER);
+                    masteryTable.addCell(yearCell);
+                }
+
+                //IMPORTANT moving this will cause tables to be placed at the wrong position
+                secondTableCell.addElement(masteryTable);
+                secondTableCell.addElement(new Paragraph("\n"));
+                //final adding all right side
                 mainTable.addCell(secondTableCell);
                 document.add(mainTable);
+
+                //moving on to the reports which will use the whole page, so we create a new page:
+                document.newPage();
+
+                //Experiences Title
+                Paragraph experiencesTitle = new Paragraph("EXPERIENCES(PROJECTS OF THE LAST 5 YEARS)",bold_font(14));
+                experiencesTitle.setAlignment(Element.ALIGN_CENTER);
+                document.add(experiencesTitle);
+                document.add(new Paragraph("\n \n"));
+                //init experience table
+                PdfPTable experienceTable = new PdfPTable(3);
+                experienceTable.setWidths(new int[]{1,1,6});
+
+                //experience table headers
+                PdfPCell countryCell = new PdfPCell(new Paragraph("Country",bold_font(10)));
+                countryCell.setBackgroundColor(BaseColor.LIGHT_GRAY);
+                countryCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                experienceTable.addCell(countryCell);
+
+                PdfPCell ExpYearCell = new PdfPCell(new Paragraph("Year",bold_font(10)));
+                ExpYearCell.setBackgroundColor(BaseColor.LIGHT_GRAY);
+                ExpYearCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                experienceTable.addCell(ExpYearCell);
+
+                PdfPCell ProjectDetailsCell = new PdfPCell(new Paragraph("Project Details",bold_font(10)));
+                ProjectDetailsCell.setBackgroundColor(BaseColor.LIGHT_GRAY);
+                ProjectDetailsCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                experienceTable.addCell(ProjectDetailsCell);
+
+                //experiencce data
+                JDBCReportDao jdbcReportDao = new JDBCReportDao();
+                for (Report report : jdbcReportDao.select(user.getId())) {
+                    PdfPCell reportCountryCell = new PdfPCell(new Paragraph(report.getCountry(),normal_font(10)));
+                    reportCountryCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    experienceTable.addCell(reportCountryCell);
+
+                    PdfPCell reportYearCell = new PdfPCell(new Paragraph(String.valueOf(report.getYear()),normal_font(9)));
+                    reportYearCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+                    experienceTable.addCell(reportYearCell);
+
+                    PdfPCell reportDetailsCell = new PdfPCell(new Paragraph(report.getDetails(),normal_font(10)));
+                    experienceTable.addCell(reportDetailsCell);
+                }
+
+                document.add(experienceTable);
 
                 document.close();
                 pdfWriter.close();
@@ -296,33 +367,42 @@ public class MainMenuController implements Initializable {
         }
     }
 
+    private void addHeader(PdfPTable certificationTable) {
+        PdfPCell certyearCell = new PdfPCell(new Paragraph("Year",bold_font(10)));
+        certyearCell.setBackgroundColor(BaseColor.LIGHT_GRAY);
+        certificationTable.addCell(certyearCell);
+    }
+
+    private void createTitle(PdfPCell secondTableCell, String certification2) {
+        Paragraph certTitle = new Paragraph(certification2, bold_font(14));
+        certTitle.setAlignment(Element.ALIGN_CENTER);
+        secondTableCell.addElement(certTitle);
+    }
+
     private void userDetails(User user, Font bold_size10, Font underline_size9, PdfPTable mainTable, PdfPCell firstTableCell, PdfPTable firstTable) {
         Paragraph name = new Paragraph(user.getName(),bold_size10);
-        name.setAlignment(Element.ALIGN_CENTER);
-        firstTableCell.addElement(name);
-        firstTableCell.addElement(new Paragraph("\n"));
+        addParagraphAlignCenter(firstTableCell, name);
 
         Paragraph surname = new Paragraph(user.getSurname(),bold_size10);
-        surname.setAlignment(Element.ALIGN_CENTER);
-        firstTableCell.addElement(surname);
-        firstTableCell.addElement(new Paragraph("\n"));
+        addParagraphAlignCenter(firstTableCell, surname);
 
         Paragraph position = new Paragraph(user.getPosition(),bold_size10);
-        position.setAlignment(Element.ALIGN_CENTER);
-        firstTableCell.addElement(position);
-        firstTableCell.addElement(new Paragraph("\n"));
+        addParagraphAlignCenter(firstTableCell, position);
 
         Paragraph email = new Paragraph(user.getEmail(),underline_size9);
-        email.setAlignment(Element.ALIGN_CENTER);
-        firstTableCell.addElement(email);
-        firstTableCell.addElement(new Paragraph("\n"));
+        addParagraphAlignCenter(firstTableCell, email);
 
         Paragraph site = new Paragraph("www.aequasys.com",underline_size9);
-        site.setAlignment(Element.ALIGN_CENTER);
-        firstTableCell.addElement(site);
+        addParagraphAlignCenter(firstTableCell, site);
 
         firstTableCell.addElement(firstTable);
         mainTable.addCell(firstTableCell);
+    }
+
+    private void addParagraphAlignCenter(PdfPCell firstTableCell, Paragraph surname) {
+        surname.setAlignment(Element.ALIGN_CENTER);
+        firstTableCell.addElement(surname);
+        firstTableCell.addElement(new Paragraph("\n"));
     }
 
     public static PdfPCell createImageCell(String path) throws DocumentException, IOException {

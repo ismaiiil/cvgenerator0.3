@@ -355,6 +355,7 @@ public class UserRecordsDetailsController{
     public void finish_button_pressed(ActionEvent event) {
         closeWindow();
     }
+
     private void closeWindow(){
         Stage stage = (Stage) finish_button.getScene().getWindow();
         stage.close();
