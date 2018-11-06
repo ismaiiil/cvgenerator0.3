@@ -289,10 +289,16 @@ public class MainMenuController implements Initializable {
                 document.newPage();
 
                 //Experiences Title
-                Paragraph experiencesTitle = new Paragraph("EXPERIENCES(PROJECTS OF THE LAST 5 YEARS)",bold_font(14));
-                experiencesTitle.setAlignment(Element.ALIGN_CENTER);
-                document.add(experiencesTitle);
-                document.add(new Paragraph("\n \n"));
+//                Paragraph experiencesTitle = new Paragraph("EXPERIENCES(PROJECTS OF THE LAST 5 YEARS)",bold_font(14));
+//                experiencesTitle.setAlignment(Element.ALIGN_CENTER);
+//                document.add(experiencesTitle);
+
+                PdfPTable expTitleTable = new PdfPTable(1);
+                expTitleTable.setWidthPercentage(100.0f);
+                PdfPCell exptitlecell = new PdfPCell();
+                createTitle(exptitlecell,"EXPERIENCES(PROJECTS OF THE LAST 5 YEARS)");
+                expTitleTable.addCell(exptitlecell);
+                document.add(expTitleTable);
                 //init experience table
                 PdfPTable experienceTable = new PdfPTable(3);
                 experienceTable.setWidths(new int[]{1,1,6});
@@ -337,10 +343,18 @@ public class MainMenuController implements Initializable {
         table.addCell(cell);
     }
 
-    private void createTitle(PdfPCell secondTableCell, String certification2) {
-        Paragraph certTitle = new Paragraph(certification2, bold_font(14));
-        certTitle.setAlignment(Element.ALIGN_CENTER);
-        secondTableCell.addElement(certTitle);
+    private void createTitle(PdfPCell secondTableCell, String Title) {
+        PdfPTable titleTable = new PdfPTable(1);
+        titleTable.setWidthPercentage(100.0f);
+        Paragraph parTitle = new Paragraph(Title, bold_font(14));
+        parTitle.setAlignment(Element.ALIGN_CENTER);
+        PdfPCell titleCell = new PdfPCell(parTitle);
+        titleCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+        titleCell.setBorder(Rectangle.TOP | Rectangle.BOTTOM);
+        titleCell.setBorderColor(BaseColor.GRAY);
+        titleTable.addCell(titleCell);
+        secondTableCell.addElement(titleTable);
+        secondTableCell.addElement(new Paragraph("\n"));
     }
 
     private void userDetails(User user, Font bold_size10, Font underline_size9, PdfPTable mainTable, PdfPCell firstTableCell, PdfPTable firstTable) {

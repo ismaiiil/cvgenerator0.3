@@ -35,8 +35,8 @@ public class HeaderFooterPageEvent extends PdfPageEventHelper {
             header.setTotalWidth(527);
             header.setLockedWidth(true);
             header.getDefaultCell().setFixedHeight(40);
-            header.getDefaultCell().setBorder(Rectangle.BOTTOM);
-            header.getDefaultCell().setBorderColor(BaseColor.LIGHT_GRAY);
+            header.getDefaultCell().setBorder(Rectangle.NO_BORDER);
+            //header.getDefaultCell().setBorderColor(BaseColor.LIGHT_GRAY);
 
             // add image
             Image logo = Image.getInstance(HeaderFooterPageEvent.class.getResource("/resources/headerimage.png"));
@@ -49,7 +49,7 @@ public class HeaderFooterPageEvent extends PdfPageEventHelper {
 //            text.setBorder(Rectangle.BOTTOM);
 //            text.setBorderColor(BaseColor.LIGHT_GRAY);
 //            text.addElement(new Phrase("iText PDF Header Footer Example", new Font(Font.FontFamily.HELVETICA, 12)));
-//            text.addElement(new Phrase("https://memorynotfound.com", new Font(Font.FontFamily.HELVETICA, 8)));
+//            text.addElement(new Phrase("https://www.aequasys.com", new Font(Font.FontFamily.HELVETICA, 8)));
 //            header.addCell(text);
 
             // write content

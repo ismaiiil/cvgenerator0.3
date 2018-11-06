@@ -5,10 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/controller/HeaderFooterPageEvent.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/resources/headerimage.png" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/controller/MainMenuController.class" afterPath="$PROJECT_DIR$/out/production/CVgeneratorv0.2/controller/MainMenuController.class" />
+      <change beforePath="$PROJECT_DIR$/src/controller/HeaderFooterPageEvent.java" afterPath="$PROJECT_DIR$/src/controller/HeaderFooterPageEvent.java" />
       <change beforePath="$PROJECT_DIR$/src/controller/MainMenuController.java" afterPath="$PROJECT_DIR$/src/controller/MainMenuController.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
@@ -25,7 +24,7 @@
     <SUITE FILE_PATH="coverage/CVgeneratorv0_2$Main.coverage" NAME="Main Coverage Results" MODIFIED="1540555298276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>controller.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/cvgenerator0_3$Main.coverage" NAME="Main Coverage Results" MODIFIED="1541064934843" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+    <SUITE FILE_PATH="coverage/cvgenerator0_3$Main.coverage" NAME="Main Coverage Results" MODIFIED="1541490908533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>controller.*</FILTER>
     </SUITE>
   </component>
@@ -141,8 +140,8 @@
       <file leaf-file-name="MainMenuController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/controller/MainMenuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="281" column="57" lean-forward="false" selection-start-line="281" selection-start-column="57" selection-end-line="281" selection-end-column="57" />
+            <state relative-caret-position="175">
+              <caret line="299" column="50" lean-forward="false" selection-start-line="299" selection-start-column="50" selection-end-line="299" selection-end-column="50" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="method#initialize#0;class#MainMenuController#0" expanded="false" />
@@ -160,8 +159,8 @@
       <file leaf-file-name="HeaderFooterPageEvent.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/controller/HeaderFooterPageEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="38">
-              <caret line="78" column="120" lean-forward="false" selection-start-line="78" selection-start-column="120" selection-end-line="78" selection-end-column="120" />
+            <state relative-caret-position="153">
+              <caret line="37" column="65" lean-forward="false" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="65" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -755,7 +754,7 @@
       <workItem from="1541016312541" duration="426000" />
       <workItem from="1541017059128" duration="57673000" />
       <workItem from="1541350424653" duration="7400000" />
-      <workItem from="1541385063412" duration="6354000" />
+      <workItem from="1541385063412" duration="9015000" />
     </task>
     <task id="LOCAL-00001" summary="Crud user working">
       <created>1540936599095</created>
@@ -841,11 +840,18 @@
       <option name="project" value="LOCAL" />
       <updated>1541489414766</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="added footer and header update test code for tables">
+      <created>1541489460574</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1541489460574</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="164867000" />
+    <option name="totallyTimeSpent" value="167528000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -870,11 +876,12 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32973805" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21571648" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14901665" sideWeight="0.52455795" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2065053" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14901665" sideWeight="0.4833006" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.14901665" sideWeight="0.47544205" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -889,7 +896,6 @@
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19894099" sideWeight="0.51669943" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.13251156" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -975,7 +981,8 @@
     <MESSAGE value="all crud working correctly v0.1" />
     <MESSAGE value="code refactoring" />
     <MESSAGE value="added footer and header" />
-    <option name="LAST_COMMIT_MESSAGE" value="added footer and header" />
+    <MESSAGE value="added footer and header update test code for tables" />
+    <option name="LAST_COMMIT_MESSAGE" value="added footer and header update test code for tables" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1347,13 +1354,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="das://table:/9028f4c0/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/TEST.REPORTS">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1362,10 +1362,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="das://table:/9028f4c0/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/TEST.REPORTS">
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/HeaderFooterPageEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="78" column="120" lean-forward="false" selection-start-line="78" selection-start-column="120" selection-end-line="78" selection-end-column="120" />
+        <state relative-caret-position="153">
+          <caret line="37" column="65" lean-forward="false" selection-start-line="37" selection-start-column="65" selection-end-line="37" selection-end-column="65" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1374,8 +1381,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/MainMenuController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="281" column="57" lean-forward="false" selection-start-line="281" selection-start-column="57" selection-end-line="281" selection-end-column="57" />
+        <state relative-caret-position="175">
+          <caret line="299" column="50" lean-forward="false" selection-start-line="299" selection-start-column="50" selection-end-line="299" selection-end-column="50" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="method#initialize#0;class#MainMenuController#0" expanded="false" />
