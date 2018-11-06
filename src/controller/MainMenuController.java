@@ -249,8 +249,6 @@ public class MainMenuController implements Initializable {
                     PdfPCell diplomaCell = new PdfPCell();
                     diplomaCell.addElement(new Paragraph(qualification.getDiploma(),bold_font(9)));
                     diplomaCell.addElement(new Paragraph(qualification.getUniversity(),normal_font(9)));
-                    diplomaCell.setHorizontalAlignment(Element.ALIGN_CENTER);
-                    diplomaCell.setVerticalAlignment(Element.ALIGN_CENTER);
                     qualificationTable.addCell(diplomaCell);
                 }
                 //IMPORTANT moving this will cause tables to be placed at the wrong position
@@ -296,6 +294,7 @@ public class MainMenuController implements Initializable {
                 PdfPTable expTitleTable = new PdfPTable(1);
                 expTitleTable.setWidthPercentage(100.0f);
                 PdfPCell exptitlecell = new PdfPCell();
+                exptitlecell.setBorder(Rectangle.NO_BORDER);
                 createTitle(exptitlecell,"EXPERIENCES(PROJECTS OF THE LAST 5 YEARS)");
                 expTitleTable.addCell(exptitlecell);
                 document.add(expTitleTable);
@@ -345,7 +344,7 @@ public class MainMenuController implements Initializable {
 
     private void createTitle(PdfPCell secondTableCell, String Title) {
         PdfPTable titleTable = new PdfPTable(1);
-        titleTable.setWidthPercentage(100.0f);
+        titleTable.setWidthPercentage(85.0f);
         Paragraph parTitle = new Paragraph(Title, bold_font(14));
         parTitle.setAlignment(Element.ALIGN_CENTER);
         PdfPCell titleCell = new PdfPCell(parTitle);
