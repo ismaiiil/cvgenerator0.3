@@ -280,12 +280,6 @@ public class MainMenuController implements Initializable {
 
                 //IMPORTANT moving this will cause tables to be placed at the wrong position
                 secondTableCell.addElement(masteryTable);
-                secondTableCell.addElement(masteryTable);
-                secondTableCell.addElement(masteryTable);
-                secondTableCell.addElement(masteryTable);
-                secondTableCell.addElement(masteryTable);
-                secondTableCell.addElement(masteryTable);
-                secondTableCell.addElement(masteryTable);
                 secondTableCell.addElement(new Paragraph("\n"));
                 //final adding all right side
                 mainTable.addCell(secondTableCell);
