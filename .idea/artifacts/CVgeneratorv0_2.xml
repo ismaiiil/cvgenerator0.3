@@ -1,0 +1,25 @@
+<component name="ArtifactManager">
+  <artifact type="javafx" name="CVgeneratorv0.2">
+    <output-path>$PROJECT_DIR$/out/artifacts/CVgeneratorv0_2</output-path>
+    <properties id="javafx-properties">
+      <options>
+        <option name="appClass" value="com.aequasys.Main" />
+        <option name="description" value="" />
+        <option name="htmlPlaceholderId" value="" />
+        <option name="title" value="" />
+        <option name="vendor" value="" />
+        <option name="version" value="" />
+      </options>
+    </properties>
+    <root id="root">
+      <element id="archive" name="CVgeneratorv0_2.jar">
+        <element id="module-output" name="CVgeneratorv0.2" />
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/com/aequasys/META-INF/MANIFEST.MF" />
+        </element>
+      </element>
+      <element id="library" level="project" name="itextpdf-5.5.13" />
+      <element id="library" level="project" name="ojdbc6" />
+    </root>
+  </artifact>
+</component>
