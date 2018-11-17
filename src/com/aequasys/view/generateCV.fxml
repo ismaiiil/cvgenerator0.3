@@ -10,7 +10,6 @@
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="164.0" prefWidth="330.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aequasys.controller.GenerateCVController">
    <center>
       <VBox prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
@@ -22,7 +21,7 @@
                         <Insets left="15.0" right="15.0" top="15.0" />
                      </HBox.margin>
                   </Label>
-                  <TextField prefHeight="25.0" prefWidth="84.0">
+                  <TextField fx:id="years_textfield" prefHeight="25.0" prefWidth="84.0">
                      <HBox.margin>
                         <Insets right="15.0" top="15.0" />
                      </HBox.margin>
@@ -36,7 +35,7 @@
             </HBox>
             <HBox prefHeight="53.0" prefWidth="330.0" VBox.vgrow="ALWAYS">
                <children>
-                  <ChoiceBox prefHeight="25.0" prefWidth="240.0" HBox.hgrow="ALWAYS">
+                  <ChoiceBox fx:id="choiceBox" prefHeight="25.0" prefWidth="240.0" HBox.hgrow="ALWAYS">
                      <HBox.margin>
                         <Insets bottom="15.0" left="50.0" right="30.0" top="15.0" />
                      </HBox.margin>
@@ -46,12 +45,12 @@
             <HBox prefHeight="61.0" prefWidth="330.0" VBox.vgrow="ALWAYS">
                <children>
                   <Region prefHeight="59.0" prefWidth="126.0" />
-                  <Button mnemonicParsing="false" text="Choose Folder">
+                  <Button fx:id="choose_folder_btn" mnemonicParsing="false" onAction="#choose_folder_btn_pressed" text="Choose Folder">
                      <HBox.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </HBox.margin>
                   </Button>
-                  <Button mnemonicParsing="false" text="Cancel">
+                  <Button fx:id="cancel_btn" mnemonicParsing="false" onAction="#cancel_btn_pressed" text="Cancel">
                      <HBox.margin>
                         <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
                      </HBox.margin>

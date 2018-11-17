@@ -27,7 +27,7 @@ public class Main extends Application {
 /*
     TODONE: give user option to choose destination of CV
 
-    TODO: give user option to choose last 5,4,3... etc years of experience
+    TODONE: give user option to choose last 5,4,3... etc years of experience
 
     TODO: filter users by masteries in MainMenu.fxml
         -TODONE: maybe filter users by name and surname too
@@ -36,7 +36,7 @@ public class Main extends Application {
 
     TODO: create new template, (optional: add icons for email and location)
 
-    TODO: give user option to user another template
+    TODONE: give user option to user another template
 
     TODONE: fix crash on wrong IP
  */

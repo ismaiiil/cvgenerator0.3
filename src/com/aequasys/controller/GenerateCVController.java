@@ -10,7 +10,14 @@ import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
+import javafx.scene.control.Button;
+import javafx.scene.control.ChoiceBox;
+import javafx.scene.control.TextField;
 import javafx.stage.DirectoryChooser;
+import javafx.stage.Stage;
 
 import javax.swing.*;
 import java.io.File;
@@ -21,10 +28,82 @@ import java.net.MalformedURLException;
 
 public class GenerateCVController {
     public boolean button_pressed;
+    public TextField years_textfield;
+    public ChoiceBox<String> choiceBox;
+    public Button choose_folder_btn;
+    public Button cancel_btn;
     private User user_selected;
+
+    ObservableList listofTemplates = FXCollections.observableArrayList();
 
     public void init_user(User user){
         user_selected = user;
+        years_textfield.setText("5");
+        listofTemplates.add("template 1");
+        listofTemplates.add("template 2");
+        choiceBox.setItems(listofTemplates);
+        choiceBox.setValue("template 1");
+        //System.out.println(choiceBox.getValue());
+
+    }
+
+    private void addTextCell(PdfPTable table,String header,BaseColor baseColor,int elementAlign,Font font) {
+        PdfPCell cell = new PdfPCell(new Paragraph(header,font));
+        cell.setBackgroundColor(baseColor);
+        cell.setHorizontalAlignment(elementAlign);
+        table.addCell(cell);
+    }
+
+    private void createTitle(PdfPCell secondTableCell, String Title) {
+        PdfPTable titleTable = new PdfPTable(1);
+        titleTable.setWidthPercentage(85.0f);
+        Paragraph parTitle = new Paragraph(Title, bold_font(14));
+        parTitle.setAlignment(Element.ALIGN_CENTER);
+        PdfPCell titleCell = new PdfPCell(parTitle);
+        titleCell.setHorizontalAlignment(Element.ALIGN_CENTER);
+        titleCell.setBorder(Rectangle.TOP | Rectangle.BOTTOM);
+        titleCell.setBorderColor(BaseColor.GRAY);
+        titleTable.addCell(titleCell);
+        secondTableCell.addElement(titleTable);
+        secondTableCell.addElement(new Paragraph("\n"));
+    }
+
+    private void userDetails(User user, Font bold_size10, Font underline_size9, PdfPTable mainTable, PdfPCell firstTableCell, PdfPTable firstTable) {
+        Paragraph name = new Paragraph(user.getName(),bold_size10);
+        addParagraphAlignCenter(firstTableCell, name);
+
+        Paragraph surname = new Paragraph(user.getSurname(),bold_size10);
+        addParagraphAlignCenter(firstTableCell, surname);
+
+        Paragraph position = new Paragraph(user.getPosition(),bold_size10);
+        addParagraphAlignCenter(firstTableCell, position);
+
+        Paragraph email = new Paragraph(user.getEmail(),underline_size9);
+        addParagraphAlignCenter(firstTableCell, email);
+
+        Paragraph site = new Paragraph("www.aequasys.com",underline_size9);
+        addParagraphAlignCenter(firstTableCell, site);
+
+        firstTableCell.addElement(firstTable);
+        mainTable.addCell(firstTableCell);
+    }
+
+    private void addParagraphAlignCenter(PdfPCell firstTableCell, Paragraph surname) {
+        surname.setAlignment(Element.ALIGN_CENTER);
+        firstTableCell.addElement(surname);
+        firstTableCell.addElement(new Paragraph("\n"));
+    }
+
+    private Font bold_font(int  size){
+        return  new Font(Font.FontFamily.HELVETICA,size,Font.BOLD);
+    }
+
+    private Font underline_font(int size){
+        return new Font(Font.FontFamily.HELVETICA,size,Font.UNDERLINE);
+    }
+
+    private Font normal_font(int size){
+        return  new Font(Font.FontFamily.HELVETICA,size,Font.NORMAL);
     }
 
     private void generateReportForUser(User user) {
@@ -38,7 +117,7 @@ public class GenerateCVController {
 
             try{
                 DirectoryChooser directoryChooser = new DirectoryChooser();
-                File selectedDirectory = directoryChooser.showDialog(generate_cv_button.getScene().getWindow());
+                File selectedDirectory = directoryChooser.showDialog(choose_folder_btn.getScene().getWindow());
                 if(selectedDirectory == null){
                     pathToFile = new JFileChooser().getFileSystemView().getDefaultDirectory().toString();
                 }else{
@@ -177,7 +256,7 @@ public class GenerateCVController {
 
                 //experiencce data
                 JDBCReportDao jdbcReportDao = new JDBCReportDao();
-                for (Report report : jdbcReportDao.select(user.getId())) {
+                for (Report report : jdbcReportDao.selectByLastYears(user.getId(),Integer.parseInt(years_textfield.getText()))) {
                     addTextCell(experienceTable,report.getCountry(),BaseColor.WHITE,Element.ALIGN_CENTER,normal_font(10));
                     addTextCell(experienceTable,String.valueOf(report.getYear()),BaseColor.WHITE,Element.ALIGN_CENTER,normal_font(10));
                     addTextCell(experienceTable,String.valueOf(report.getDetails()),BaseColor.WHITE,Element.ALIGN_LEFT,normal_font(10));
@@ -200,4 +279,22 @@ public class GenerateCVController {
             }
         }
     }
+
+    public void cancel_btn_pressed(ActionEvent event) {
+        closeWindow();
+    }
+
+    public void choose_folder_btn_pressed(ActionEvent event) {
+        if(choiceBox.getValue().equals("template 1")){
+            generateReportForUser(user_selected);
+            closeWindow();
+        }
+
+    }
+
+    private void closeWindow() {
+        Stage stage = (Stage) cancel_btn.getScene().getWindow();
+        stage.close();
+    }
+
 }
