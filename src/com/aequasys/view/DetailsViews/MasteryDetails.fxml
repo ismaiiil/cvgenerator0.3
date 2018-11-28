@@ -2,22 +2,27 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.Region?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="255.0" prefWidth="419.0" xmlns="http://javafx.com/javafx/8.0.162" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aequasys.controller.MasteryDetailsController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="255.0" prefWidth="419.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aequasys.controller.MasteryDetailsController">
    <bottom>
       <HBox prefHeight="50.0" prefWidth="345.0" BorderPane.alignment="CENTER">
          <children>
-            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <Region prefHeight="50.0" prefWidth="90.0" HBox.hgrow="ALWAYS" />
+            <Button mnemonicParsing="false" onAction="#add_options_btn_pressed" prefHeight="25.0" prefWidth="174.0" text="Add More Options for Filters" HBox.hgrow="ALWAYS">
+               <HBox.margin>
+                  <Insets top="10.0" />
+               </HBox.margin>
+            </Button>
             <Button fx:id="cancel_btn" mnemonicParsing="false" onAction="#cancel_btn_pressed" prefHeight="25.0" prefWidth="68.0" text="Cancel" HBox.hgrow="ALWAYS">
                <HBox.margin>
-                  <Insets left="5.0" right="5.0" top="10.0" />
+                  <Insets left="5.0" top="10.0" />
                </HBox.margin>
             </Button>
             <Button fx:id="save_btn" layoutX="78.0" layoutY="10.0" mnemonicParsing="false" onAction="#save_btn_pressed" prefHeight="25.0" prefWidth="68.0" text="FInish">
@@ -74,11 +79,11 @@
                   </HBox>
                   <HBox layoutX="10.0" layoutY="110.0" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
                      <children>
-                        <TextArea fx:id="technology_text" prefHeight="105.0" prefWidth="240.0" HBox.hgrow="ALWAYS">
+                        <ChoiceBox fx:id="choicebox_mastery" prefHeight="25.0" prefWidth="238.0" HBox.hgrow="ALWAYS">
                            <HBox.margin>
-                              <Insets right="10.0" />
+                              <Insets top="10.0" />
                            </HBox.margin>
-                        </TextArea>
+                        </ChoiceBox>
                      </children>
                   </HBox>
                </children>

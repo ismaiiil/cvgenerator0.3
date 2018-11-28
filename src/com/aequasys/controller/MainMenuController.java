@@ -56,14 +56,21 @@ public class MainMenuController implements Initializable {
     @Override
     public void initialize(URL location, ResourceBundle resources) {
 
-        String[] filters = {"AIX", "NetBackup", "Oracle", "PowerHA", "Linux", "Informix", "Baies de disques",
-                    "VMware", "Veeam"};
-        for (String filter:filters) {
-            stringListOfFilters.add(filter);
-        }
+        resetFilters();
         initTableCells();
         refreshFilterChoiceBox();
         textfield_filters_display.setEditable(false);
+    }
+
+    private void resetFilters() {
+        stringListOfFilters.clear();
+        selectedStringListOfFilters.clear();
+        textfield_filters_display.clear();
+        JDBCFilterDao jdbcFilterDao = new JDBCFilterDao();
+        for (Filter filter:jdbcFilterDao.select()) {
+            stringListOfFilters.add(filter.getMastery());
+        }
+        refreshTable();
     }
 
     private void initTableCells() {
@@ -121,7 +128,9 @@ public class MainMenuController implements Initializable {
 
     public void button_refresh_pressed(ActionEvent event) {
         refreshTable();
-
+        resetFilters();
+        refreshFilterChoiceBox();
+        refreshRemoveFilterChoiceBox();
     }
 
     public void delete_btn_pressed(ActionEvent event) {
@@ -203,7 +212,10 @@ public class MainMenuController implements Initializable {
                 Stage stage = new Stage();
                 stage.setTitle("Edit User:" + user.getName() + user.getSurname());
                 stage.setScene(new Scene(root2));
-                stage.show();
+                stage.showAndWait();
+                resetFilters();
+                refreshFilterChoiceBox();
+                refreshRemoveFilterChoiceBox();
             } catch (IOException e) {
                 e.printStackTrace();
             }
@@ -249,7 +261,6 @@ public class MainMenuController implements Initializable {
             stage.setTitle("Connection settings");
             stage.setScene(new Scene(root2));
             stage.showAndWait();
-
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -303,6 +314,23 @@ public class MainMenuController implements Initializable {
                 refreshFilterTexfield();
                 break;
             }
+        }
+    }
+
+    public void btn_stored_filters_pressed(ActionEvent event) {
+        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/com/aequasys/view/DetailsViews/FiltersDetails.fxml"));
+        try {
+            Parent root2 = (Parent) fxmlloader.load();
+            Stage stage = new Stage();
+            stage.setTitle("Filters stored");
+            stage.setScene(new Scene(root2));
+            stage.showAndWait();
+            resetFilters();
+            refreshFilterChoiceBox();
+            refreshRemoveFilterChoiceBox();
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 }

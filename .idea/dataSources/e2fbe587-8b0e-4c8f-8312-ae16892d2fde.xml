@@ -4,9 +4,9 @@
     <root id="1"/>
     <schema id="2" parent="1" name="TEST">
       <ObjectId>112</ObjectId>
-      <IntrospectionTimestamp>2018-10-12.14:34:04</IntrospectionTimestamp>
+      <IntrospectionTimestamp>2018-11-28.10:59:27</IntrospectionTimestamp>
       <CreatedTimestamp>2018-10-09.01:54:19</CreatedTimestamp>
-      <ModifiedTimestamp>2018-10-12.14:34:03</ModifiedTimestamp>
+      <ModifiedTimestamp>2018-11-28.10:59:26</ModifiedTimestamp>
       <Current>1</Current>
       <Visible>1</Visible>
     </schema>
@@ -181,57 +181,71 @@
       <SequenceIdentity>1</SequenceIdentity>
       <BelongsToColumn>1</BelongsToColumn>
     </sequence>
-    <table id="50" parent="2" name="CERTIFICATIONS">
+    <sequence id="50" parent="2" name="ISEQ$$_75748">
+      <ObjectId>75749</ObjectId>
+      <NameSurrogate>1</NameSurrogate>
+      <CreatedTimestamp>2018-11-28.10:58:52</CreatedTimestamp>
+      <ModifiedTimestamp>2018-11-28.10:58:52</ModifiedTimestamp>
+      <SequenceIdentity>1</SequenceIdentity>
+      <BelongsToColumn>1</BelongsToColumn>
+    </sequence>
+    <table id="51" parent="2" name="CERTIFICATIONS">
       <ObjectId>73937</ObjectId>
       <CreatedTimestamp>2018-10-09.18:31:01</CreatedTimestamp>
       <ModifiedTimestamp>2018-10-12.14:32:48</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="51" parent="2" name="MASTERIES">
+    <table id="52" parent="2" name="FILTERS">
+      <ObjectId>75748</ObjectId>
+      <CreatedTimestamp>2018-11-28.10:58:52</CreatedTimestamp>
+      <ModifiedTimestamp>2018-11-28.10:59:26</ModifiedTimestamp>
+      <TemporaryPreserve>1</TemporaryPreserve>
+    </table>
+    <table id="53" parent="2" name="MASTERIES">
       <ObjectId>73934</ObjectId>
       <CreatedTimestamp>2018-10-09.18:21:28</CreatedTimestamp>
       <ModifiedTimestamp>2018-10-12.14:32:31</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="52" parent="2" name="QUALIFICATIONS">
+    <table id="54" parent="2" name="QUALIFICATIONS">
       <ObjectId>73940</ObjectId>
       <CreatedTimestamp>2018-10-09.18:34:17</CreatedTimestamp>
       <ModifiedTimestamp>2018-10-12.14:32:18</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="53" parent="2" name="REPORTS">
+    <table id="55" parent="2" name="REPORTS">
       <ObjectId>73944</ObjectId>
       <CreatedTimestamp>2018-10-09.18:44:31</CreatedTimestamp>
       <ModifiedTimestamp>2018-10-12.14:33:27</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <table id="54" parent="2" name="USERS">
+    <table id="56" parent="2" name="USERS">
       <ObjectId>73898</ObjectId>
       <CreatedTimestamp>2018-10-09.04:53:36</CreatedTimestamp>
       <ModifiedTimestamp>2018-10-12.14:34:03</ModifiedTimestamp>
       <TemporaryPreserve>1</TemporaryPreserve>
     </table>
-    <column id="55" parent="50" name="ID">
+    <column id="57" parent="51" name="ID">
       <Position>1</Position>
       <DataType>NUMBER(*)|0</DataType>
       <NotNull>1</NotNull>
       <AutoInc>1</AutoInc>
       <DefaultOnNull>1</DefaultOnNull>
     </column>
-    <column id="56" parent="50" name="YEAR">
+    <column id="58" parent="51" name="YEAR">
       <Position>2</Position>
       <DataType>NUMBER(*)|0</DataType>
     </column>
-    <column id="57" parent="50" name="QUALIFICATION">
+    <column id="59" parent="51" name="QUALIFICATION">
       <Position>3</Position>
       <DataType>VARCHAR2(200)|0</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="58" parent="50" name="USER_ID">
+    <column id="60" parent="51" name="USER_ID">
       <Position>4</Position>
       <DataType>NUMBER(*)|0</DataType>
     </column>
-    <index id="59" parent="50" name="CERTIFICATIONS_ID_UINDEX">
+    <index id="61" parent="51" name="CERTIFICATIONS_ID_UINDEX">
       <ObjectId>73939</ObjectId>
       <CreatedTimestamp>2018-10-09.18:31:32</CreatedTimestamp>
       <ModifiedTimestamp>2018-10-09.18:31:32</ModifiedTimestamp>
@@ -239,14 +253,14 @@
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="60" parent="50" name="CERTIFICATIONS_ID_PK">
+    <key id="62" parent="51" name="CERTIFICATIONS_ID_PK">
       <ModifiedTimestamp>2018-10-09.18:31:32</ModifiedTimestamp>
       <ColNames>ID</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>CERTIFICATIONS_ID_UINDEX</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="61" parent="50" name="CERTIFICATIONS_USER_ID_FK">
+    <foreign-key id="63" parent="51" name="CERTIFICATIONS_USER_ID_FK">
       <ModifiedTimestamp>2018-10-09.18:36:34</ModifiedTimestamp>
       <ColNames>USER_ID</ColNames>
       <RefSchemaName>TEST</RefSchemaName>
@@ -254,28 +268,54 @@
       <RefKeyName>USERS_ID_PK</RefKeyName>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="62" parent="51" name="ID">
+    <column id="64" parent="52" name="ID">
       <Position>1</Position>
       <DataType>NUMBER(*)|0</DataType>
       <NotNull>1</NotNull>
       <AutoInc>1</AutoInc>
       <DefaultOnNull>1</DefaultOnNull>
     </column>
-    <column id="63" parent="51" name="TECHNOLOGY">
+    <column id="65" parent="52" name="MASTERY">
+      <Position>2</Position>
+      <DataType>VARCHAR2(255)|0</DataType>
+    </column>
+    <index id="66" parent="52" name="FILTERS_ID_PK">
+      <ObjectId>75750</ObjectId>
+      <CreatedTimestamp>2018-11-28.10:59:26</CreatedTimestamp>
+      <ModifiedTimestamp>2018-11-28.10:59:26</ModifiedTimestamp>
+      <TablespaceName>USERS</TablespaceName>
+      <ColNames>ID</ColNames>
+      <Unique>1</Unique>
+    </index>
+    <key id="67" parent="52" name="FILTERS_ID_PK">
+      <ModifiedTimestamp>2018-11-28.10:59:26</ModifiedTimestamp>
+      <ColNames>ID</ColNames>
+      <InitiallyDeferred>1</InitiallyDeferred>
+      <UnderlyingIndexName>FILTERS_ID_PK</UnderlyingIndexName>
+      <Primary>1</Primary>
+    </key>
+    <column id="68" parent="53" name="ID">
+      <Position>1</Position>
+      <DataType>NUMBER(*)|0</DataType>
+      <NotNull>1</NotNull>
+      <AutoInc>1</AutoInc>
+      <DefaultOnNull>1</DefaultOnNull>
+    </column>
+    <column id="69" parent="53" name="TECHNOLOGY">
       <Position>2</Position>
       <DataType>VARCHAR2(200)|0</DataType>
       <NotNull>1</NotNull>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="64" parent="51" name="EXPERIENCE">
+    <column id="70" parent="53" name="EXPERIENCE">
       <Position>3</Position>
       <DataType>NUMBER(*)|0</DataType>
     </column>
-    <column id="65" parent="51" name="USER_ID">
+    <column id="71" parent="53" name="USER_ID">
       <Position>4</Position>
       <DataType>NUMBER(*)|0</DataType>
     </column>
-    <index id="66" parent="51" name="MASTER_ID_PK">
+    <index id="72" parent="53" name="MASTER_ID_PK">
       <ObjectId>73936</ObjectId>
       <CreatedTimestamp>2018-10-09.18:21:53</CreatedTimestamp>
       <ModifiedTimestamp>2018-10-09.18:21:53</ModifiedTimestamp>
@@ -283,14 +323,14 @@
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="67" parent="51" name="MASTER_ID_PK">
+    <key id="73" parent="53" name="MASTER_ID_PK">
       <ModifiedTimestamp>2018-10-09.18:21:53</ModifiedTimestamp>
       <ColNames>ID</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>MASTER_ID_PK</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="68" parent="51" name="MASTERIES_USER_ID_FK">
+    <foreign-key id="74" parent="53" name="MASTERIES_USER_ID_FK">
       <ModifiedTimestamp>2018-10-09.18:37:41</ModifiedTimestamp>
       <ColNames>USER_ID</ColNames>
       <RefSchemaName>TEST</RefSchemaName>
@@ -298,32 +338,32 @@
       <RefKeyName>USERS_ID_PK</RefKeyName>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="69" parent="52" name="ID">
+    <column id="75" parent="54" name="ID">
       <Position>1</Position>
       <DataType>NUMBER(*)|0</DataType>
       <NotNull>1</NotNull>
       <AutoInc>1</AutoInc>
       <DefaultOnNull>1</DefaultOnNull>
     </column>
-    <column id="70" parent="52" name="YEAR">
+    <column id="76" parent="54" name="YEAR">
       <Position>2</Position>
       <DataType>NUMBER(*)|0</DataType>
     </column>
-    <column id="71" parent="52" name="DIPLOMA">
+    <column id="77" parent="54" name="DIPLOMA">
       <Position>3</Position>
       <DataType>VARCHAR2(200)|0</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="72" parent="52" name="UNIVERSITY">
+    <column id="78" parent="54" name="UNIVERSITY">
       <Position>4</Position>
       <DataType>VARCHAR2(200)|0</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="73" parent="52" name="USER_ID">
+    <column id="79" parent="54" name="USER_ID">
       <Position>5</Position>
       <DataType>NUMBER(*)|0</DataType>
     </column>
-    <index id="74" parent="52" name="QUALIFICATIONS_ID_UINDEX">
+    <index id="80" parent="54" name="QUALIFICATIONS_ID_UINDEX">
       <ObjectId>73942</ObjectId>
       <CreatedTimestamp>2018-10-09.18:35:19</CreatedTimestamp>
       <ModifiedTimestamp>2018-10-09.18:35:19</ModifiedTimestamp>
@@ -331,14 +371,14 @@
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="75" parent="52" name="QUALIFICATIONS_ID_PK">
+    <key id="81" parent="54" name="QUALIFICATIONS_ID_PK">
       <ModifiedTimestamp>2018-10-09.18:37:59</ModifiedTimestamp>
       <ColNames>ID</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>QUALIFICATIONS_ID_UINDEX</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="76" parent="52" name="QUALIFICATIONS_USER_ID_FK">
+    <foreign-key id="82" parent="54" name="QUALIFICATIONS_USER_ID_FK">
       <ModifiedTimestamp>2018-10-09.18:38:22</ModifiedTimestamp>
       <ColNames>USER_ID</ColNames>
       <RefSchemaName>TEST</RefSchemaName>
@@ -346,32 +386,32 @@
       <RefKeyName>USERS_ID_PK</RefKeyName>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="77" parent="53" name="ID">
+    <column id="83" parent="55" name="ID">
       <Position>1</Position>
       <DataType>NUMBER(*)|0</DataType>
       <NotNull>1</NotNull>
       <AutoInc>1</AutoInc>
       <DefaultOnNull>1</DefaultOnNull>
     </column>
-    <column id="78" parent="53" name="COUNTRY">
+    <column id="84" parent="55" name="COUNTRY">
       <Position>2</Position>
       <DataType>VARCHAR2(100)|0</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="79" parent="53" name="YEAR">
+    <column id="85" parent="55" name="YEAR">
       <Position>3</Position>
       <DataType>NUMBER(*)|0</DataType>
     </column>
-    <column id="80" parent="53" name="DETAILS">
+    <column id="86" parent="55" name="DETAILS">
       <Position>4</Position>
       <DataType>VARCHAR2(4000)|0</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="81" parent="53" name="USER_ID">
+    <column id="87" parent="55" name="USER_ID">
       <Position>5</Position>
       <DataType>NUMBER(*)|0</DataType>
     </column>
-    <index id="82" parent="53" name="REPORTS_ID_UINDEX">
+    <index id="88" parent="55" name="REPORTS_ID_UINDEX">
       <ObjectId>73946</ObjectId>
       <CreatedTimestamp>2018-10-09.18:44:40</CreatedTimestamp>
       <ModifiedTimestamp>2018-10-09.18:44:40</ModifiedTimestamp>
@@ -379,14 +419,14 @@
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="83" parent="53" name="REPORTS_ID_PK">
+    <key id="89" parent="55" name="REPORTS_ID_PK">
       <ModifiedTimestamp>2018-10-09.18:44:40</ModifiedTimestamp>
       <ColNames>ID</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
       <UnderlyingIndexName>REPORTS_ID_UINDEX</UnderlyingIndexName>
       <Primary>1</Primary>
     </key>
-    <foreign-key id="84" parent="53" name="REPORTS_USER_ID_FK">
+    <foreign-key id="90" parent="55" name="REPORTS_USER_ID_FK">
       <ModifiedTimestamp>2018-10-09.18:45:07</ModifiedTimestamp>
       <ColNames>USER_ID</ColNames>
       <RefSchemaName>TEST</RefSchemaName>
@@ -394,33 +434,33 @@
       <RefKeyName>USERS_ID_PK</RefKeyName>
       <OnDelete>cascade</OnDelete>
     </foreign-key>
-    <column id="85" parent="54" name="ID">
+    <column id="91" parent="56" name="ID">
       <Position>1</Position>
       <DataType>NUMBER(*)|0</DataType>
       <NotNull>1</NotNull>
       <AutoInc>1</AutoInc>
       <DefaultOnNull>1</DefaultOnNull>
     </column>
-    <column id="86" parent="54" name="NAME">
+    <column id="92" parent="56" name="NAME">
       <Position>2</Position>
       <DataType>VARCHAR2(100)|0</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="87" parent="54" name="SURNAME">
+    <column id="93" parent="56" name="SURNAME">
       <Position>3</Position>
       <DataType>VARCHAR2(100)|0</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="88" parent="54" name="EMAIL">
+    <column id="94" parent="56" name="EMAIL">
       <Position>4</Position>
       <DataType>VARCHAR2(200)|0</DataType>
       <DefaultExpression>NULL</DefaultExpression>
     </column>
-    <column id="89" parent="54" name="POSITION">
+    <column id="95" parent="56" name="POSITION">
       <Position>5</Position>
       <DataType>VARCHAR2(20)|0</DataType>
     </column>
-    <index id="90" parent="54" name="USERS_ID_PK">
+    <index id="96" parent="56" name="USERS_ID_PK">
       <ObjectId>73900</ObjectId>
       <CreatedTimestamp>2018-10-09.04:56:38</CreatedTimestamp>
       <ModifiedTimestamp>2018-10-09.04:56:38</ModifiedTimestamp>
@@ -428,7 +468,7 @@
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="91" parent="54" name="USERS_ID_PK">
+    <key id="97" parent="56" name="USERS_ID_PK">
       <ModifiedTimestamp>2018-10-09.04:56:38</ModifiedTimestamp>
       <ColNames>ID</ColNames>
       <InitiallyDeferred>1</InitiallyDeferred>
