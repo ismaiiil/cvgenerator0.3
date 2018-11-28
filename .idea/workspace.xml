@@ -11,6 +11,9 @@
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/GenerateCVController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/GenerateCVController.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/view/MainMenu.fxml" afterPath="$PROJECT_DIR$/src/com/aequasys/view/MainMenu.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,13 +61,6 @@
         <item name="TEST: schema" type="ac44c5e0:OracleImplModel$Schema" />
         <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
       </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="CVdata@192.168.33.5" type="feb32156:DbDataSourceImpl" />
-        <item name="TEST: schema" type="ac44c5e0:OracleImplModel$Schema" />
-        <item name="tables" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="USERS: table" type="be4db629:OracleImplModel$Table" />
-      </path>
     </expand>
     <select />
   </component>
@@ -111,18 +107,48 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainMenuController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainMenuController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
+            <state relative-caret-position="855">
+              <caret line="278" column="61" lean-forward="false" selection-start-line="278" selection-start-column="61" selection-end-line="278" selection-end-column="61" />
               <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1519#1527#0" expanded="true" />
+                <element signature="e#1600#1608#0" expanded="true" />
                 <element signature="method#initialize#0;class#MainMenuController#0" expanded="false" />
+                <element signature="method#initTableCells#0;class#MainMenuController#0" expanded="false" />
+                <element signature="method#refreshFilterChoiceBox#0;class#MainMenuController#0" expanded="false" />
+                <element signature="method#refreshRemoveFilterChoiceBox#0;class#MainMenuController#0" expanded="false" />
+                <element signature="method#refreshTable#0;class#MainMenuController#0" expanded="false" />
+                <element signature="method#refreshFilterTexfield#0;class#MainMenuController#0" expanded="false" />
+                <element signature="method#button_refresh_pressed#0;class#MainMenuController#0" expanded="false" />
                 <element signature="method#delete_btn_pressed#0;class#MainMenuController#0" expanded="false" />
+                <element signature="method#add_btn_pressed#0;class#MainMenuController#0" expanded="false" />
                 <element signature="method#edit_btn_pressed#0;class#MainMenuController#0" expanded="false" />
                 <element signature="method#all_details_btn_pressed#0;class#MainMenuController#0" expanded="false" />
+                <element signature="method#generate_cv_button_pressed#0;class#MainMenuController#0" expanded="false" />
                 <element signature="method#createImageCell#0;class#MainMenuController#0" expanded="false" />
                 <element signature="method#button_settings_pressed#0;class#MainMenuController#0" expanded="false" />
+                <element signature="method#search_button_pressed#0;class#MainMenuController#0" expanded="false" />
+                <element signature="method#btn_add_filter_pressed#0;class#MainMenuController#0" expanded="false" />
+                <element signature="method#btn_apply_filters_pressed#0;class#MainMenuController#0" expanded="false" />
+                <element signature="method#btn_remove_filter_pressed#0;class#MainMenuController#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JDBCMasteryDao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aequasys/model/dao/jdbc/JDBCMasteryDao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="738">
+              <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+              <folding>
+                <marker date="1541719292066" expanded="true" signature="612:697" ph="INSERT INTO TEST.MASTERIES... " />
+                <marker date="1541719292066" expanded="true" signature="1717:1763" ph="SELECT * FRO... MASTERIES" />
+                <marker date="1541719292066" expanded="true" signature="2986:3023" ph="DELETE FROM TEST.MASTERIES... " />
+                <marker date="1541719292066" expanded="true" signature="3778:3855" ph="UPDATE TEST.MASTERIES... " />
               </folding>
             </state>
           </provider>
@@ -131,8 +157,8 @@
       <file leaf-file-name="GenerateCVController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/GenerateCVController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="291" column="0" lean-forward="true" selection-start-line="291" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
+            <state relative-caret-position="357">
+              <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
               <folding>
                 <element signature="method#addTextCell#0;class#GenerateCVController#0" expanded="false" />
                 <element signature="method#createTitle#0;class#GenerateCVController#0" expanded="false" />
@@ -145,21 +171,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/aequasys/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="392">
-              <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CertificationDetailsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/CertificationDetailsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="53" column="4" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
+            <state relative-caret-position="68">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
               <folding />
             </state>
           </provider>
@@ -167,71 +183,78 @@
       </file>
       <file leaf-file-name="MainMenu.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/MainMenu.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="357">
+              <caret line="123" column="96" lean-forward="true" selection-start-line="123" selection-start-column="96" selection-end-line="123" selection-end-column="96" />
+              <folding />
+            </state>
+          </provider>
           <provider editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="generateCV.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/generateCV.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="269" lean-forward="true" selection-start-line="12" selection-start-column="211" selection-end-line="12" selection-end-column="269" />
+            <state relative-caret-position="799">
+              <caret line="47" column="93" lean-forward="false" selection-start-line="47" selection-start-column="93" selection-end-line="47" selection-end-column="93" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MasteryDetailsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/MasteryDetailsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="381">
+              <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JDBCUserDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aequasys/model/dao/jdbc/JDBCUserDao.java">
+      <file leaf-file-name="UserBasicDetails.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/UserBasicDetails.fxml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="138" column="94" lean-forward="false" selection-start-line="138" selection-start-column="94" selection-end-line="138" selection-end-column="94" />
+            <state relative-caret-position="187">
+              <caret line="11" column="174" lean-forward="false" selection-start-line="11" selection-start-column="174" selection-end-line="11" selection-end-column="174" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Settings.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/Settings.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="11" column="174" lean-forward="false" selection-start-line="11" selection-start-column="174" selection-end-line="11" selection-end-column="174" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRecordsDetails.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/UserRecordsDetails.fxml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="14" column="174" lean-forward="false" selection-start-line="14" selection-start-column="174" selection-end-line="14" selection-end-column="174" />
               <folding>
-                <marker date="1542440215333" expanded="true" signature="593:673" ph="INSERT INTO TEST.USERS... " />
-                <marker date="1542440215333" expanded="true" signature="1699:1723" ph="SELECT * FRO... USERS" />
-                <marker date="1542440215333" expanded="true" signature="2810:2843" ph="DELETE FROM TEST.USERS... " />
-                <marker date="1542440215333" expanded="true" signature="3579:3652" ph="UPDATE TEST.USERS... " />
-                <marker date="1542440215333" expanded="true" signature="4854:4878" ph="SELECT * FRO... USERS" />
-                <marker date="1542440215333" expanded="true" signature="4854:4900" ph="SELECT * FRO... USERS" />
-                <marker date="1542440215333" expanded="true" signature="4854:4902" ph="SELECT * FRO... USERS" />
-                <marker date="1542440215333" expanded="true" signature="4854:4927" ph="SELECT * FRO... USERS" />
+                <element signature="n#TitledPane#0;n#panes#0;n#Accordion#0;n#children#0;n#HBox#0;n#children#0;n#StackPane#0;n#center#0;n#BorderPane#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="console.sql" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/console.sql">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="53" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JDBCReportDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aequasys/model/dao/jdbc/JDBCReportDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="290">
-              <caret line="87" column="67" lean-forward="true" selection-start-line="87" selection-start-column="67" selection-end-line="87" selection-end-column="67" />
-              <folding>
-                <marker date="1542452902854" expanded="true" signature="606:689" ph="INSERT INTO TEST.REPORTS... " />
-                <marker date="1542452902854" expanded="true" signature="1757:1816" ph="SELECT * FRO... REPORTS" />
-                <marker date="1542452902854" expanded="true" signature="1757:1820" ph="SELECT * FRO... REPORTS" />
-                <marker date="1542452902854" expanded="true" signature="3303:3344" ph="SELECT * FRO... REPORTS" />
-                <marker date="1542452902854" expanded="true" signature="3303:3443" ph="SELECT * FRO... REPORTS" />
-                <marker date="1542452902854" expanded="true" signature="4773:4808" ph="DELETE FROM TEST.REPORTS... " />
-                <marker date="1542452902854" expanded="true" signature="5562:5638" ph="UPDATE TEST.REPORTS... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ReportDao.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aequasys/model/dao/interfaces/ReportDao.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="8" column="59" lean-forward="false" selection-start-line="8" selection-start-column="59" selection-end-line="8" selection-end-column="59" />
-              <folding />
-            </state>
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
           </provider>
         </entry>
       </file>
@@ -336,9 +359,9 @@
         <option value="$PROJECT_DIR$/src/com/aequasys/model/dao/interfaces/ReportDao.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/model/dao/jdbc/JDBCReportDao.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/view/generateCV.fxml" />
-        <option value="$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java" />
-        <option value="$PROJECT_DIR$/src/com/aequasys/controller/GenerateCVController.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/controller/GenerateCVController.java" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java" />
       </list>
     </option>
   </component>
@@ -510,6 +533,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -592,9 +618,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
     </panes>
   </component>
@@ -614,7 +637,7 @@
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/com/aequasys" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Asc3 docs and files/BSc/files and projects/3APL/2JVA_Hangman-master" />
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.28850573" />
@@ -845,7 +868,9 @@
       <workItem from="1541721053410" duration="5389000" />
       <workItem from="1542002279734" duration="2273000" />
       <workItem from="1542182007095" duration="675000" />
-      <workItem from="1542391203939" duration="23861000" />
+      <workItem from="1542391203939" duration="24328000" />
+      <workItem from="1542803277757" duration="1615000" />
+      <workItem from="1543353240092" duration="11018000" />
     </task>
     <task id="LOCAL-00001" summary="Crud user working">
       <created>1540936599095</created>
@@ -973,11 +998,18 @@
       <option name="project" value="LOCAL" />
       <updated>1542460538128</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="AFTER moving generator section to another dedicated window(working fine for now)">
+      <created>1542460548713</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1542460548713</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="224557000" />
+    <option name="totallyTimeSpent" value="237657000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1000,21 +1032,19 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32924962" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25931233" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24071702" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277849" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20415473" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23997134" sideWeight="0.47544205" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20988539" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23997134" sideWeight="0.47544205" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39820743" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -1025,7 +1055,9 @@
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14901665" sideWeight="0.52455795" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277849" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -1113,11 +1145,12 @@
     <MESSAGE value="before filter setup commit" />
     <MESSAGE value="before moving generator section to another dedicated window" />
     <MESSAGE value="AFTER moving generator section to another dedicated window(working fine for now)" />
-    <option name="LAST_COMMIT_MESSAGE" value="AFTER moving generator section to another dedicated window(working fine for now)" />
+    <MESSAGE value="filters functional" />
+    <option name="LAST_COMMIT_MESSAGE" value="filters functional" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="21" />
+      <option name="time" value="22" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1268,18 +1301,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/model/dao/jdbc/JDBCMasteryDao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/eventsClasses/Column.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="14" column="58" lean-forward="true" selection-start-line="14" selection-start-column="58" selection-end-line="14" selection-end-column="58" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1294,56 +1319,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/Settings.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="174" lean-forward="false" selection-start-line="11" selection-start-column="174" selection-end-line="11" selection-end-column="174" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/UserBasicDetails.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="174" lean-forward="false" selection-start-line="11" selection-start-column="174" selection-end-line="11" selection-end-column="174" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/CertificationDetails.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="174" lean-forward="false" selection-start-line="12" selection-start-column="174" selection-end-line="12" selection-end-column="174" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/QualificationDetails.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="11" column="174" lean-forward="false" selection-start-line="11" selection-start-column="174" selection-end-line="11" selection-end-column="174" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/ReportDetails.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/ReportDetails.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="174" lean-forward="false" selection-start-line="12" selection-start-column="174" selection-end-line="12" selection-end-column="174" />
         </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/controller/META-INF/MANIFEST.MF" />
@@ -1353,25 +1356,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/MasteryDetails.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="204">
           <caret line="12" column="174" lean-forward="false" selection-start-line="12" selection-start-column="174" selection-end-line="12" selection-end-column="174" />
-          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/UserRecordsDetails.fxml">
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="174" lean-forward="false" selection-start-line="14" selection-start-column="174" selection-end-line="14" selection-end-column="174" />
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/UserBasicDetailsController.java">
@@ -1396,13 +1387,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/MasteryDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/UserRecordsDetailsController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -1415,9 +1399,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="148">
           <caret line="304" column="0" lean-forward="false" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
-          <folding>
-            <element signature="e#11668#11669#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1425,7 +1406,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
           <caret line="14" column="29" lean-forward="false" selection-start-line="14" selection-start-column="29" selection-end-line="14" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1434,8 +1414,8 @@
         <state relative-caret-position="326">
           <caret line="52" column="13" lean-forward="true" selection-start-line="52" selection-start-column="13" selection-end-line="52" selection-end-column="13" />
           <folding>
-            <element signature="e#1818#1819#0" expanded="true" />
-            <element signature="e#1848#1849#0" expanded="true" />
+            <element signature="e#1818#1819#0" expanded="false" />
+            <element signature="e#1848#1849#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1444,7 +1424,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="10" column="52" lean-forward="false" selection-start-line="10" selection-start-column="52" selection-end-line="10" selection-end-column="78" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1452,7 +1431,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="86" lean-forward="false" selection-start-line="3" selection-start-column="86" selection-end-line="3" selection-end-column="86" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1460,12 +1438,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="721">
           <caret line="73" column="5" lean-forward="true" selection-start-line="39" selection-start-column="8" selection-end-line="73" selection-end-column="5" />
-          <folding>
-            <marker date="1541719293316" expanded="true" signature="648:735" ph="INSERT INTO TEST.CERTIFICATIONS... " />
-            <marker date="1541719293316" expanded="true" signature="1787:1856" ph="SELECT * FRO... CERTIFICATIONS" />
-            <marker date="1541719293316" expanded="true" signature="3137:3179" ph="DELETE FROM TEST.CERTIFICATIONS... " />
-            <marker date="1541719293316" expanded="true" signature="3952:4031" ph="UPDATE TEST.CERTIFICATIONS... " />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1479,7 +1451,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/model/dao/jdbc/JDBCUserDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
+        <state relative-caret-position="2244">
           <caret line="138" column="94" lean-forward="false" selection-start-line="138" selection-start-column="94" selection-end-line="138" selection-end-column="94" />
           <folding>
             <marker date="1542440215333" expanded="true" signature="593:673" ph="INSERT INTO TEST.USERS... " />
@@ -1497,15 +1469,15 @@
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/console.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="53" />
+          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="1" selection-end-column="53" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/model/dao/jdbc/JDBCReportDao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="290">
-          <caret line="87" column="67" lean-forward="true" selection-start-line="87" selection-start-column="67" selection-end-line="87" selection-end-column="67" />
+        <state relative-caret-position="1377">
+          <caret line="87" column="67" lean-forward="false" selection-start-line="87" selection-start-column="67" selection-end-line="87" selection-end-column="67" />
           <folding>
             <marker date="1542452902854" expanded="true" signature="606:689" ph="INSERT INTO TEST.REPORTS... " />
             <marker date="1542452902854" expanded="true" signature="1757:1816" ph="SELECT * FRO... REPORTS" />
@@ -1518,55 +1490,72 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/MainMenu.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/CertificationDetailsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="269" lean-forward="true" selection-start-line="12" selection-start-column="211" selection-end-line="12" selection-end-column="269" />
+        <state relative-caret-position="799">
+          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/generateCV.fxml">
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/UserRecordsDetails.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="174" lean-forward="false" selection-start-line="14" selection-start-column="174" selection-end-line="14" selection-end-column="174" />
+          <folding>
+            <element signature="n#TitledPane#0;n#panes#0;n#Accordion#0;n#children#0;n#HBox#0;n#children#0;n#StackPane#0;n#center#0;n#BorderPane#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
       <provider editor-type-id="JavaFX-Scene-Builder">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/UserBasicDetails.fxml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
+        <state relative-caret-position="187">
+          <caret line="11" column="174" lean-forward="false" selection-start-line="11" selection-start-column="174" selection-end-line="11" selection-end-column="174" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/Settings.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="174" lean-forward="false" selection-start-line="11" selection-start-column="174" selection-end-line="11" selection-end-column="174" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/generateCV.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
           <caret line="47" column="93" lean-forward="false" selection-start-line="47" selection-start-column="93" selection-end-line="47" selection-end-column="93" />
           <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/CertificationDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="53" column="4" lean-forward="true" selection-start-line="53" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
-          <folding />
-        </state>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java">
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/MasteryDetailsController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="201" column="0" lean-forward="false" selection-start-line="201" selection-start-column="0" selection-end-line="201" selection-end-column="0" />
-          <folding>
-            <element signature="method#initialize#0;class#MainMenuController#0" expanded="false" />
-            <element signature="method#delete_btn_pressed#0;class#MainMenuController#0" expanded="false" />
-            <element signature="method#edit_btn_pressed#0;class#MainMenuController#0" expanded="false" />
-            <element signature="method#all_details_btn_pressed#0;class#MainMenuController#0" expanded="false" />
-            <element signature="method#createImageCell#0;class#MainMenuController#0" expanded="false" />
-            <element signature="method#button_settings_pressed#0;class#MainMenuController#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="381">
+          <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="56" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/GenerateCVController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="291" column="0" lean-forward="true" selection-start-line="291" selection-start-column="0" selection-end-line="291" selection-end-column="0" />
+        <state relative-caret-position="357">
+          <caret line="45" column="0" lean-forward="true" selection-start-line="45" selection-start-column="0" selection-end-line="45" selection-end-column="0" />
           <folding>
             <element signature="method#addTextCell#0;class#GenerateCVController#0" expanded="false" />
             <element signature="method#createTitle#0;class#GenerateCVController#0" expanded="false" />
@@ -1580,9 +1569,63 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="392">
-          <caret line="38" column="10" lean-forward="false" selection-start-line="38" selection-start-column="10" selection-end-line="38" selection-end-column="10" />
+        <state relative-caret-position="68">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/MainMenu.fxml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="123" column="96" lean-forward="true" selection-start-line="123" selection-start-column="96" selection-end-line="123" selection-end-column="96" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/model/dao/jdbc/JDBCMasteryDao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="738">
+          <caret line="60" column="38" lean-forward="true" selection-start-line="60" selection-start-column="38" selection-end-line="60" selection-end-column="38" />
+          <folding>
+            <marker date="1541719292066" expanded="true" signature="612:697" ph="INSERT INTO TEST.MASTERIES... " />
+            <marker date="1541719292066" expanded="true" signature="1717:1763" ph="SELECT * FRO... MASTERIES" />
+            <marker date="1541719292066" expanded="true" signature="2986:3023" ph="DELETE FROM TEST.MASTERIES... " />
+            <marker date="1541719292066" expanded="true" signature="3778:3855" ph="UPDATE TEST.MASTERIES... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="278" column="61" lean-forward="false" selection-start-line="278" selection-start-column="61" selection-end-line="278" selection-end-column="61" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1519#1527#0" expanded="true" />
+            <element signature="e#1600#1608#0" expanded="true" />
+            <element signature="method#initialize#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#initTableCells#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#refreshFilterChoiceBox#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#refreshRemoveFilterChoiceBox#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#refreshTable#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#refreshFilterTexfield#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#button_refresh_pressed#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#delete_btn_pressed#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#add_btn_pressed#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#edit_btn_pressed#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#all_details_btn_pressed#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#generate_cv_button_pressed#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#createImageCell#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#button_settings_pressed#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#search_button_pressed#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#btn_add_filter_pressed#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#btn_apply_filters_pressed#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#btn_remove_filter_pressed#0;class#MainMenuController#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

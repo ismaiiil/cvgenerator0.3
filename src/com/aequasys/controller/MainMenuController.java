@@ -3,7 +3,8 @@ package com.aequasys.controller;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
 import com.aequasys.eventsClasses.Column;
-import com.aequasys.eventsClasses.HeaderFooterPageEvent;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,20 +14,14 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
 import com.aequasys.model.dao.jdbc.*;
 import com.aequasys.model.vo.*;
 
-import javax.swing.*;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileOutputStream;
 import java.io.IOException;
-import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Optional;
-import java.util.ResourceBundle;
+import java.util.*;
+import java.util.List;
 
 public class MainMenuController implements Initializable {
 
@@ -44,6 +39,9 @@ public class MainMenuController implements Initializable {
     public Button button_settings;
     public TextField name_search_box;
     public TextField surname_search_box;
+    public ChoiceBox choicebox_masteries;
+    public TextField textfield_filters_display;
+    public ChoiceBox choicebox_remove_masteries;
 
     @FXML
     private Button delete_btn;
@@ -51,9 +49,24 @@ public class MainMenuController implements Initializable {
     @FXML
     private TableView table_object;
 
+    private List<String> stringListOfFilters = new ArrayList<String>();
+
+    private List<String> selectedStringListOfFilters = new ArrayList<String>();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+
+        String[] filters = {"AIX", "NetBackup", "Oracle", "PowerHA", "Linux", "Informix", "Baies de disques",
+                    "VMware", "Veeam"};
+        for (String filter:filters) {
+            stringListOfFilters.add(filter);
+        }
+        initTableCells();
+        refreshFilterChoiceBox();
+        textfield_filters_display.setEditable(false);
+    }
+
+    private void initTableCells() {
         col_id.setCellValueFactory(
                 new PropertyValueFactory<User,Integer>("id")
         );
@@ -71,17 +84,40 @@ public class MainMenuController implements Initializable {
         );
         Column.setCellWrappable(col_email);
         Column.setCellWrappable(col_surname);
-        //refreshTable();
-
-
     }
 
+    private void refreshFilterChoiceBox() {
+        ObservableList observableListOfFilters = FXCollections.observableArrayList();
+
+        for (String filter:stringListOfFilters) {
+            observableListOfFilters.add(filter);
+        }
+
+        choicebox_masteries.setItems(observableListOfFilters);
+        choicebox_masteries.getSelectionModel().selectFirst();
+    }
+
+    private void refreshRemoveFilterChoiceBox(){
+        ObservableList removeObservableListOfFilters = FXCollections.observableArrayList();
+        for (String filter:selectedStringListOfFilters) {
+            removeObservableListOfFilters.add(filter);
+        }
+
+        choicebox_remove_masteries.setItems(removeObservableListOfFilters);
+        choicebox_remove_masteries.getSelectionModel().selectFirst();
+    }
 
     public void refreshTable() {
         JDBCUserDao jdbcUserDao = new JDBCUserDao();
         table_object.setItems(jdbcUserDao.select());
     }
 
+    public void refreshFilterTexfield(){
+        textfield_filters_display.clear();
+        for (String filter:selectedStringListOfFilters) {
+            textfield_filters_display.appendText(filter+", ");
+        }
+    }
 
     public void button_refresh_pressed(ActionEvent event) {
         refreshTable();
@@ -197,10 +233,6 @@ public class MainMenuController implements Initializable {
         }
     }
 
-
-
-
-
     public static PdfPCell createImageCell(String path) throws DocumentException, IOException {
         Image img = Image.getInstance(path);
         PdfPCell cell = new PdfPCell(img, true);
@@ -227,5 +259,50 @@ public class MainMenuController implements Initializable {
     public void search_button_pressed(ActionEvent event) {
         JDBCUserDao jdbcUserDao = new JDBCUserDao();
         table_object.setItems(jdbcUserDao.selectByNameSurname(name_search_box.getText(),surname_search_box.getText()));
+    }
+
+    public void btn_add_filter_pressed(ActionEvent event) {
+        for (String filter:stringListOfFilters) {
+            if(choicebox_masteries.getValue() == filter){
+                selectedStringListOfFilters.add(filter);
+                stringListOfFilters.remove(filter);
+                refreshRemoveFilterChoiceBox();
+                refreshFilterChoiceBox();
+                refreshFilterTexfield();
+                break;
+            }
+        }
+
+
+    }
+
+    public void btn_apply_filters_pressed(ActionEvent event) {
+        ObservableList observableListofFilteredUsers = FXCollections.observableArrayList();
+        ObservableList observableListofMasteries = FXCollections.observableArrayList();
+        JDBCUserDao jdbcUserDao = new JDBCUserDao();
+        JDBCMasteryDao jdbcMasteryDao = new JDBCMasteryDao();
+        for (User user:jdbcUserDao.select()) {
+            observableListofMasteries.clear();
+            for (Mastery mastery:jdbcMasteryDao.select(user.getId())) {
+                observableListofMasteries.add(mastery.getTechnology());
+            }
+            if(observableListofMasteries.containsAll(selectedStringListOfFilters)){
+                observableListofFilteredUsers.add(user);
+            }
+        }
+        table_object.setItems(observableListofFilteredUsers);
+    }
+
+    public void btn_remove_filter_pressed(ActionEvent event) {
+        for (String filter:selectedStringListOfFilters) {
+            if(choicebox_remove_masteries.getValue() == filter){
+                stringListOfFilters.add(filter);
+                selectedStringListOfFilters.remove(filter);
+                refreshRemoveFilterChoiceBox();
+                refreshFilterChoiceBox();
+                refreshFilterTexfield();
+                break;
+            }
+        }
     }
 }

@@ -43,7 +43,6 @@ public class GenerateCVController {
         listofTemplates.add("template 2");
         choiceBox.setItems(listofTemplates);
         choiceBox.setValue("template 1");
-        //System.out.println(choiceBox.getValue());
 
     }
 
