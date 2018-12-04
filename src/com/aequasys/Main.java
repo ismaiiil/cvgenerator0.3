@@ -10,9 +10,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/com/aequasys/view/MainMenu.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/com/aequasys/view/loginMenu.fxml"));
         primaryStage.setTitle("CV generator");
         primaryStage.setScene(new Scene(root));
+        primaryStage.setResizable(false);
         primaryStage.show();
 
     }
@@ -29,13 +30,13 @@ public class Main extends Application {
 
     TODONE: give user option to choose last 5,4,3... etc years of experience
 
-    TODO: filter users by masteries in MainMenu.fxml
+    TODONE: filter users by masteries in MainMenu.fxml
         -TODONE: maybe filter users by name and surname too
         -TOSKIP: find SQL for multiple qualifications and code it in JDBCs
-        -TODO: do filtering application side instead of server side
+        -TODONE: do filtering application side instead of server side
 
     TODO: create new template, (optional: add icons for email and location)
-
+    TODO: create a menu where the user cna establish the connection with settings
     TODONE: give user option to user another template
 
     TODONE: fix crash on wrong IP
