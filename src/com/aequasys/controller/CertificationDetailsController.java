@@ -1,5 +1,6 @@
 package com.aequasys.controller;
 
+import com.aequasys.eventsClasses.ErrorLogger;
 import com.aequasys.eventsClasses.IntField;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
@@ -14,7 +15,6 @@ public class CertificationDetailsController {
     public Button save_btn;
     public TextField year_text;
     public TextArea certification_text;
-
     private Certification passedCertification;
 
     boolean button_pressed;
@@ -60,4 +60,5 @@ public class CertificationDetailsController {
         Stage stage = (Stage) cancel_btn.getScene().getWindow();
         stage.close();
     }
+
 }

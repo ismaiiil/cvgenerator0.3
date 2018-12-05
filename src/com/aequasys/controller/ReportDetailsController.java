@@ -1,5 +1,6 @@
 package com.aequasys.controller;
 
+import com.aequasys.eventsClasses.ErrorLogger;
 import com.aequasys.eventsClasses.IntField;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;

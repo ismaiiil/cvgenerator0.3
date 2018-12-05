@@ -1,5 +1,6 @@
 package com.aequasys.controller;
 
+import com.aequasys.eventsClasses.ErrorLogger;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
 import com.aequasys.eventsClasses.Column;
@@ -51,6 +52,12 @@ public class MainMenuController implements Initializable {
     private List<String> stringListOfFilters = new ArrayList<String>();
 
     private List<String> selectedStringListOfFilters = new ArrayList<String>();
+
+    private void logError(Exception e){
+        ErrorLogger errorLogger = new ErrorLogger();
+        errorLogger.log(e);
+    }
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -169,7 +176,7 @@ public class MainMenuController implements Initializable {
 
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            logError(e);
         }
 
 
@@ -195,7 +202,7 @@ public class MainMenuController implements Initializable {
                 }
 
             } catch (IOException e) {
-                e.printStackTrace();
+                logError(e);
             }
 
 
@@ -219,7 +226,7 @@ public class MainMenuController implements Initializable {
                 refreshFilterChoiceBox();
                 refreshRemoveFilterChoiceBox();
             } catch (IOException e) {
-                e.printStackTrace();
+                logError(e);
             }
 
 
@@ -244,7 +251,7 @@ public class MainMenuController implements Initializable {
                     refreshTable();
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                logError(e);
             }
         }
 
@@ -321,7 +328,7 @@ public class MainMenuController implements Initializable {
             refreshRemoveFilterChoiceBox();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            logError(e);
         }
     }
 }

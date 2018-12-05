@@ -1,5 +1,6 @@
 package com.aequasys.controller;
 
+import com.aequasys.eventsClasses.ErrorLogger;
 import com.aequasys.eventsClasses.HeaderFooterPageEvent;
 import com.aequasys.eventsClasses.IntField;
 import com.aequasys.model.dao.jdbc.JDBCCertificationDao;
@@ -36,6 +37,7 @@ public class GenerateCVController {
     private User user_selected;
 
     ObservableList listofTemplates = FXCollections.observableArrayList();
+
 
     public void init_user(User user){
         user_selected = user;
@@ -273,13 +275,13 @@ public class GenerateCVController {
 
 
             } catch (FileNotFoundException e) {
-                e.printStackTrace();
+                logError(e);
             } catch (DocumentException e) {
-                e.printStackTrace();
+                logError(e);
             } catch (MalformedURLException e) {
-                e.printStackTrace();
+                logError(e);
             } catch (IOException e) {
-                e.printStackTrace();
+                logError(e);
             }
         }
     }
@@ -301,4 +303,8 @@ public class GenerateCVController {
         stage.close();
     }
 
+    private void logError(Exception e){
+        ErrorLogger errorLogger = new ErrorLogger();
+        errorLogger.log(e);
+    }
 }

@@ -11,12 +11,18 @@ public class HeaderFooterPageEvent extends PdfPageEventHelper {
     private PdfTemplate t;
     private Image total;
 
+    private void logError(Exception e){
+        ErrorLogger errorLogger = new ErrorLogger();
+        errorLogger.log(e);
+    }
+
     public void onOpenDocument(PdfWriter writer, Document document) {
         t = writer.getDirectContent().createTemplate(30, 16);
         try {
             total = Image.getInstance(t);
             total.setRole(PdfName.ARTIFACT);
         } catch (DocumentException de) {
+            logError(de);
             throw new ExceptionConverter(de);
         }
     }
@@ -55,10 +61,13 @@ public class HeaderFooterPageEvent extends PdfPageEventHelper {
             // write content
             header.writeSelectedRows(0, -1, 34, 803, writer.getDirectContent());
         } catch(DocumentException de) {
+            logError(de);
             throw new ExceptionConverter(de);
         } catch (MalformedURLException e) {
+            logError(e);
             throw new ExceptionConverter(e);
         } catch (IOException e) {
+            logError(e);
             throw new ExceptionConverter(e);
         }
     }
@@ -94,6 +103,7 @@ public class HeaderFooterPageEvent extends PdfPageEventHelper {
             footer.writeSelectedRows(0, -1, 34, 50, canvas);
             canvas.endMarkedContentSequence();
         } catch(DocumentException de) {
+            logError(de);
             throw new ExceptionConverter(de);
         }
     }

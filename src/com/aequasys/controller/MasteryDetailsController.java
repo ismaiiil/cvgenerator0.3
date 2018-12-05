@@ -1,5 +1,6 @@
 package com.aequasys.controller;
 
+import com.aequasys.eventsClasses.ErrorLogger;
 import com.aequasys.eventsClasses.IntField;
 import com.aequasys.model.dao.jdbc.JDBCFilterDao;
 import com.aequasys.model.vo.Filter;
@@ -29,6 +30,12 @@ public class MasteryDetailsController {
 
     boolean button_pressed;
 
+    private void logError(Exception e){
+        ErrorLogger errorLogger = new ErrorLogger();
+        errorLogger.log(e);
+    }
+
+
     public void cancel_btn_pressed(ActionEvent event) {
         button_pressed = true;
         closeWindow();
@@ -41,9 +48,18 @@ public class MasteryDetailsController {
     public void init_mastery(Mastery mastery){
         passedMastery = mastery;
         resetChoicebox();
+        JDBCFilterDao jdbcFilterDao = new JDBCFilterDao();
+        ObservableList<String> filters = FXCollections.observableArrayList();
+        for (Filter filter:jdbcFilterDao.select()) {
+            filters.add(filter.getMastery());
+        }
         if(passedMastery.getId()!=0){
             years_text.setText(String.valueOf(passedMastery.getExperience()));
-            choicebox_mastery.setValue(passedMastery.getTechnology());
+            if(filters.contains(passedMastery.getTechnology())){
+                choicebox_mastery.setValue(passedMastery.getTechnology());
+            }
+
+
         }
         IntField.convertToIntField(years_text);
     }
@@ -94,7 +110,7 @@ public class MasteryDetailsController {
             resetChoicebox();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            logError(e);
         }
     }
 }

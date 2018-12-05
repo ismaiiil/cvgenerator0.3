@@ -6,12 +6,31 @@
     </artifacts-to-build>
   </component>
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/com/aequasys/controller/ReportDetailsController.java" line="23" mnemonic="1" />
+    <bookmark url="file://$PROJECT_DIR$/src/com/aequasys/controller/ReportDetailsController.java" line="24" mnemonic="1" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/aequasys/eventsClasses/ErrorLogger.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/Main.java" afterPath="$PROJECT_DIR$/src/com/aequasys/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/CertificationDetailsController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/CertificationDetailsController.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/FilterDetailsController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/FilterDetailsController.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/GenerateCVController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/GenerateCVController.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/LoginMenuController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/LoginMenuController.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/MasteryDetailsController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/MasteryDetailsController.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/QualificationDetailsController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/QualificationDetailsController.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/ReportDetailsController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/ReportDetailsController.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/SettingsController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/SettingsController.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/UserBasicDetailsController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/UserBasicDetailsController.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/UserRecordsDetailsController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/UserRecordsDetailsController.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/eventsClasses/HeaderFooterPageEvent.java" afterPath="$PROJECT_DIR$/src/com/aequasys/eventsClasses/HeaderFooterPageEvent.java" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/FiltersDetails.fxml" afterPath="$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/FiltersDetails.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/MasteryDetails.fxml" afterPath="$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/MasteryDetails.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/view/MainMenu.fxml" afterPath="$PROJECT_DIR$/src/com/aequasys/view/MainMenu.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/view/Settings.fxml" afterPath="$PROJECT_DIR$/src/com/aequasys/view/Settings.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/view/UserRecordsDetails.fxml" afterPath="$PROJECT_DIR$/src/com/aequasys/view/UserRecordsDetails.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/view/generateCV.fxml" afterPath="$PROJECT_DIR$/src/com/aequasys/view/generateCV.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/view/loginMenu.fxml" afterPath="$PROJECT_DIR$/src/com/aequasys/view/loginMenu.fxml" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -27,8 +46,8 @@
     <SUITE FILE_PATH="coverage/CVgeneratorv0_2$Main.coverage" NAME="Main Coverage Results" MODIFIED="1540555298276" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
       <FILTER>controller.*</FILTER>
     </SUITE>
-    <SUITE FILE_PATH="coverage/cvgenerator0_3$Main.coverage" NAME="Main Coverage Results" MODIFIED="1541490908533" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
-      <FILTER>controller.*</FILTER>
+    <SUITE FILE_PATH="coverage/cvgenerator0_3$Main.coverage" NAME="Main Coverage Results" MODIFIED="1543972931171" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>com.aequasys.eventsClasses.*</FILTER>
     </SUITE>
   </component>
   <component name="CreatePatchCommitExecutor">
@@ -43,38 +62,7 @@
     <option name="SHOW_TABLE_DETAILS" value="true" />
     <option name="SHOW_EMPTY_GROUPS" value="false" />
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
-    <expand>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TEST@192.168.1.82" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TEST@192.168.1.82" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TEST@192.168.1.82" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="TEST: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TEST@localhost" type="feb32156:DbDataSourceImpl" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TEST@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-      </path>
-      <path>
-        <item name="Database" type="3277223f:DatabaseStructure$DbRootGroup" />
-        <item name="TEST@localhost" type="feb32156:DbDataSourceImpl" />
-        <item name="schemas" type="d4e8921:DatabaseStructure$FamilyGroup" />
-        <item name="test: schema" type="c314c289:MysqlImplModel$Schema" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="DebuggerManager">
@@ -120,90 +108,31 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MasteryDetailsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/MasteryDetailsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="322">
-              <caret line="70" column="18" lean-forward="true" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
-              <folding>
-                <element signature="e#1071#1072#0" expanded="true" />
-                <element signature="e#1102#1103#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QualificationDetailsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/QualificationDetailsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="55" column="26" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CertificationDetailsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/CertificationDetailsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="54" column="26" lean-forward="false" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="GenerateCVController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/GenerateCVController.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="199" column="75" lean-forward="false" selection-start-line="199" selection-start-column="75" selection-end-line="199" selection-end-column="75" />
-              <folding>
-                <element signature="method#createTitle#0;class#GenerateCVController#0" expanded="false" />
-                <element signature="method#userDetails#0;class#GenerateCVController#0" expanded="false" />
-                <element signature="method#addParagraphAlignCenter#0;class#GenerateCVController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="LoginMenuController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/LoginMenuController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="518">
-              <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
+            <state relative-caret-position="4171">
+              <caret line="305" column="4" lean-forward="false" selection-start-line="305" selection-start-column="4" selection-end-line="308" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#3878#3879#0" expanded="true" />
+                <element signature="e#3952#3953#0" expanded="true" />
+                <element signature="e#3996#3997#0" expanded="true" />
+                <element signature="e#4074#4075#0" expanded="true" />
+                <element signature="e#4115#4116#0" expanded="true" />
+                <element signature="e#4191#4192#0" expanded="true" />
+                <element signature="e#13393#13394#0" expanded="true" />
+                <element signature="e#13422#13423#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/aequasys/Main.java">
+      <file leaf-file-name="HeaderFooterPageEvent.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/aequasys/eventsClasses/HeaderFooterPageEvent.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="28" column="3" lean-forward="false" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="FilterDetailsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/FilterDetailsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="577">
-              <caret line="65" column="31" lean-forward="false" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserBasicDetailsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/UserBasicDetailsController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-52">
-              <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+            <state relative-caret-position="203">
+              <caret line="102" column="48" lean-forward="false" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="48" />
               <folding />
             </state>
           </provider>
@@ -212,8 +141,18 @@
       <file leaf-file-name="IntField.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/aequasys/eventsClasses/IntField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
+            <state relative-caret-position="68">
               <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LoginMenuController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/LoginMenuController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="308">
+              <caret line="47" column="24" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -221,15 +160,52 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ReportDetailsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/ReportDetailsController.java">
+      <file leaf-file-name="Column.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aequasys/eventsClasses/Column.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
-              <folding>
-                <element signature="e#2034#2035#0" expanded="true" />
-                <element signature="e#2064#2065#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="68">
+              <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ErrorLogger.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aequasys/eventsClasses/ErrorLogger.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="850">
+              <caret line="57" column="11" lean-forward="false" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CertificationDetailsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/CertificationDetailsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-205">
+              <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FilterDetailsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/FilterDetailsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-542">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserRecordsDetailsController.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/UserRecordsDetailsController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="289">
+              <caret line="69" column="10" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="72" selection-end-column="5" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -256,6 +232,7 @@
       <find>alignment</find>
       <find>addCell</find>
       <find>10</find>
+      <find>exception</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -287,13 +264,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/controller/CertificationDetailsController.java" />
-        <option value="$PROJECT_DIR$/src/model/vo/Report.java" />
-        <option value="$PROJECT_DIR$/src/controller/MasteryDetailsController.java" />
-        <option value="$PROJECT_DIR$/src/controller/ReportDetailsController.java" />
-        <option value="$PROJECT_DIR$/src/model/dao/interfaces/ReportDao.java" />
-        <option value="$PROJECT_DIR$/src/controller/UserBasicDetailsController.java" />
-        <option value="$PROJECT_DIR$/src/controller/UserRecordsDetailsController.java" />
         <option value="$PROJECT_DIR$/src/controller/HeaderFooterPageEvent.java" />
         <option value="$PROJECT_DIR$/src/eventsClasses/HeaderFooterPageEvent.java" />
         <option value="$PROJECT_DIR$/src/model/dao/jdbc/JDBCCertificationDao.java" />
@@ -314,30 +284,37 @@
         <option value="$PROJECT_DIR$/src/Main.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/console_1.sql" />
         <option value="$PROJECT_DIR$/src/com/aequasys/model/dao/interfaces/UserDao.java" />
-        <option value="$PROJECT_DIR$/src/com/aequasys/view/MainMenu.fxml" />
         <option value="$PROJECT_DIR$/src/com/aequasys/model/dao/jdbc/JDBCUserDao.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/model/dao/interfaces/ReportDao.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/model/dao/jdbc/JDBCReportDao.java" />
-        <option value="$PROJECT_DIR$/src/com/aequasys/view/generateCV.fxml" />
         <option value="$PROJECT_DIR$/src/com/aequasys/model/vo/Filter.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/model/dao/interfaces/FilterDao.java" />
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/console.sql" />
         <option value="$PROJECT_DIR$/src/com/aequasys/model/dao/jdbc/JDBCFilterDao.java" />
-        <option value="$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/FiltersDetails.fxml" />
-        <option value="$PROJECT_DIR$/src/com/aequasys/view/loginMenu.fxml" />
-        <option value="$PROJECT_DIR$/src/com/aequasys/controller/LoginMenuController.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/model/dao/connection/ConnectionFactory.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/eventsClasses/IntField.java" />
-        <option value="$PROJECT_DIR$/src/com/aequasys/controller/SettingsController.java" />
-        <option value="$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java" />
-        <option value="$PROJECT_DIR$/src/com/aequasys/controller/UserRecordsDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/FiltersDetails.fxml" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/MasteryDetails.fxml" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/view/generateCV.fxml" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/view/loginMenu.fxml" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/view/MainMenu.fxml" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/view/Settings.fxml" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/view/UserRecordsDetails.fxml" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/eventsClasses/LoggerGenerator.java" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/eventsClasses/ErrorLogger.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/controller/GenerateCVController.java" />
-        <option value="$PROJECT_DIR$/src/com/aequasys/controller/FilterDetailsController.java" />
-        <option value="$PROJECT_DIR$/src/com/aequasys/controller/MasteryDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/controller/UserBasicDetailsController.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/controller/CertificationDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/controller/FilterDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/controller/LoginMenuController.java" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/controller/MasteryDetailsController.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/controller/QualificationDetailsController.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/controller/ReportDetailsController.java" />
-        <option value="$PROJECT_DIR$/src/com/aequasys/Main.java" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/controller/SettingsController.java" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/controller/UserRecordsDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/eventsClasses/HeaderFooterPageEvent.java" />
       </list>
     </option>
   </component>
@@ -509,16 +486,17 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
-      <pane id="AndroidView" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
               <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+              <item name="out" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
@@ -538,10 +516,119 @@
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="aequasys" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aequasys" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aequasys" type="462c0819:PsiDirectoryNode" />
+              <item name="eventsClasses" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aequasys" type="462c0819:PsiDirectoryNode" />
+              <item name="META-INF" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aequasys" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aequasys" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aequasys" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="connection" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aequasys" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="interfaces" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aequasys" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="jdbc" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aequasys" type="462c0819:PsiDirectoryNode" />
+              <item name="model" type="462c0819:PsiDirectoryNode" />
+              <item name="vo" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aequasys" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aequasys" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
+              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="com" type="462c0819:PsiDirectoryNode" />
+              <item name="aequasys" type="462c0819:PsiDirectoryNode" />
+              <item name="view" type="462c0819:PsiDirectoryNode" />
+              <item name="DetailsViews" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
+      <pane id="AndroidView" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -795,7 +882,8 @@
       <workItem from="1542803277757" duration="1615000" />
       <workItem from="1543353240092" duration="22493000" />
       <workItem from="1543829851861" duration="4461000" />
-      <workItem from="1543917473303" duration="16791000" />
+      <workItem from="1543917473303" duration="19005000" />
+      <workItem from="1543974638895" duration="3913000" />
     </task>
     <task id="LOCAL-00001" summary="Crud user working">
       <created>1540936599095</created>
@@ -958,11 +1046,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543971065409</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="Updated Todos">
+      <created>1543972146430</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1543972146430</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="270384000" />
+    <option name="totallyTimeSpent" value="276511000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -975,7 +1070,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1456" height="916" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -987,11 +1081,11 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25931233" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19974391" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297546" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290653" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23424068" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16189112" sideWeight="0.47544205" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23782235" sideWeight="0.6703755" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16404012" sideWeight="0.4688" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -1006,7 +1100,7 @@
       <window_info id="Profiler" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.14901665" sideWeight="0.52455795" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Coverage" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.59240687" sideWeight="0.5312" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3277849" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
       <window_info id="Problems" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
@@ -1101,11 +1195,12 @@
     <MESSAGE value="filters functional" />
     <MESSAGE value="filters functional more functionality and consistency" />
     <MESSAGE value="some exceptions fixed" />
-    <option name="LAST_COMMIT_MESSAGE" value="some exceptions fixed" />
+    <MESSAGE value="Updated Todos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated Todos" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="23" />
+      <option name="time" value="26" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -1114,58 +1209,11 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/ReportDetails.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="174" lean-forward="false" selection-start-line="12" selection-start-column="174" selection-end-line="12" selection-end-column="174" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/controller/META-INF/MANIFEST.MF" />
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/resources/logo.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_162/javafx-src.zip!/javafx/collections/FXCollections.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="304" column="0" lean-forward="false" selection-start-line="304" selection-start-column="0" selection-end-line="304" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/console_1.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
           <caret line="3" column="86" lean-forward="false" selection-start-line="3" selection-start-column="86" selection-end-line="3" selection-end-column="86" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/UserRecordsDetails.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="174" lean-forward="false" selection-start-line="14" selection-start-column="174" selection-end-line="14" selection-end-column="174" />
-          <folding>
-            <element signature="n#TitledPane#0;n#panes#0;n#Accordion#0;n#children#0;n#HBox#0;n#children#0;n#StackPane#0;n#center#0;n#BorderPane#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/UserBasicDetails.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="174" lean-forward="false" selection-start-line="11" selection-start-column="174" selection-end-line="11" selection-end-column="174" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/model/dao/interfaces/MasteryDao.java">
@@ -1217,17 +1265,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/CertificationDetails.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="277" lean-forward="false" selection-start-line="12" selection-start-column="212" selection-end-line="12" selection-end-column="282" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="das://table:/9028f4c0/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/TEST.FILTERS">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -1240,28 +1277,6 @@
         <state relative-caret-position="68">
           <caret line="4" column="20" lean-forward="false" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="20" />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/FiltersDetails.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="37" column="52" lean-forward="false" selection-start-line="37" selection-start-column="52" selection-end-line="37" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/MasteryDetails.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="17" column="63" lean-forward="false" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/model/dao/interfaces/FilterDao.java">
@@ -1302,17 +1317,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/generateCV.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="799">
-          <caret line="47" column="93" lean-forward="false" selection-start-line="47" selection-start-column="93" selection-end-line="47" selection-end-column="93" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/model/dao/interfaces/QualificationDao.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
@@ -1332,19 +1336,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/loginMenu.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="30" lean-forward="false" selection-start-line="11" selection-start-column="30" selection-end-line="11" selection-end-column="30" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/model/dao/connection/ConnectionFactory.java">
@@ -1362,24 +1354,13 @@
         <state relative-caret-position="289">
           <caret line="17" column="68" lean-forward="true" selection-start-line="17" selection-start-column="68" selection-end-line="17" selection-end-column="68" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <marker date="1543374304693" expanded="true" signature="606:660" ph="INSERT INTO TEST.FILTERS... " />
             <marker date="1543374304693" expanded="true" signature="1512:1538" ph="SELECT * FRO... FILTERS" />
             <marker date="1543374304693" expanded="true" signature="2458:2493" ph="DELETE FROM TEST.FILTERS... " />
             <marker date="1543374304693" expanded="true" signature="3238:3287" ph="UPDATE TEST.FILTERS... " />
           </folding>
         </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/QualificationDetails.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="174" lean-forward="false" selection-start-line="11" selection-start-column="174" selection-end-line="11" selection-end-column="174" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/model/dao/jdbc/JDBCUserDao.java">
@@ -1403,10 +1384,270 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/eventsClasses/HeaderFooterPageEvent.java">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ea3e1e66-6190-4e47-bbc5-202652732b45/console.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/CertificationDetails.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="544">
+          <caret line="32" column="19" lean-forward="true" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/FiltersDetails.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="174" lean-forward="false" selection-start-line="12" selection-start-column="174" selection-end-line="12" selection-end-column="174" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/MasteryDetails.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="174" lean-forward="false" selection-start-line="12" selection-start-column="174" selection-end-line="12" selection-end-column="174" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/QualificationDetails.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="174" lean-forward="false" selection-start-line="11" selection-start-column="174" selection-end-line="11" selection-end-column="174" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/ReportDetails.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="174" lean-forward="false" selection-start-line="12" selection-start-column="174" selection-end-line="12" selection-end-column="174" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/loginMenu.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="174" lean-forward="false" selection-start-line="7" selection-start-column="174" selection-end-line="7" selection-end-column="174" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/MainMenu.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="174" lean-forward="false" selection-start-line="14" selection-start-column="174" selection-end-line="14" selection-end-column="174" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/Settings.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="175" lean-forward="false" selection-start-line="11" selection-start-column="175" selection-end-line="11" selection-end-column="175" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/UserBasicDetails.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="174" lean-forward="false" selection-start-line="11" selection-start-column="174" selection-end-line="11" selection-end-column="174" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/UserRecordsDetails.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="174" lean-forward="false" selection-start-line="14" selection-start-column="174" selection-end-line="14" selection-end-column="174" />
+          <folding>
+            <element signature="n#TitledPane#0;n#panes#0;n#Accordion#0;n#children#0;n#HBox#0;n#children#0;n#StackPane#0;n#center#0;n#BorderPane#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/generateCV.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="174" lean-forward="false" selection-start-line="12" selection-start-column="174" selection-end-line="12" selection-end-column="174" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/eventsClasses/LoggerGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="182">
+          <caret line="55" column="35" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="35" />
+          <folding>
+            <element signature="method#add_btn_pressed#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#search_button_pressed#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#btn_add_filter_pressed#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#btn_apply_filters_pressed#0;class#MainMenuController#0" expanded="false" />
+            <element signature="method#btn_remove_filter_pressed#0;class#MainMenuController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/MasteryDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="364">
+          <caret line="112" column="24" lean-forward="false" selection-start-line="112" selection-start-column="24" selection-end-line="112" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/QualificationDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="22" column="27" lean-forward="false" selection-start-line="22" selection-start-column="27" selection-end-line="22" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/ReportDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="123">
+          <caret line="20" column="27" lean-forward="false" selection-start-line="20" selection-start-column="27" selection-end-line="20" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/UserBasicDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-430">
+          <caret line="18" column="35" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/SettingsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/LoginMenuController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="47" column="24" lean-forward="false" selection-start-line="47" selection-start-column="24" selection-end-line="47" selection-end-column="24" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/CertificationDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-205">
+          <caret line="24" column="5" lean-forward="false" selection-start-line="24" selection-start-column="5" selection-end-line="24" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/FilterDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-542">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/GenerateCVController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="4171">
+          <caret line="305" column="4" lean-forward="false" selection-start-line="305" selection-start-column="4" selection-end-line="308" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#3878#3879#0" expanded="true" />
+            <element signature="e#3952#3953#0" expanded="true" />
+            <element signature="e#3996#3997#0" expanded="true" />
+            <element signature="e#4074#4075#0" expanded="true" />
+            <element signature="e#4115#4116#0" expanded="true" />
+            <element signature="e#4191#4192#0" expanded="true" />
+            <element signature="e#13393#13394#0" expanded="true" />
+            <element signature="e#13422#13423#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/UserRecordsDetailsController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="69" column="10" lean-forward="false" selection-start-line="69" selection-start-column="4" selection-end-line="72" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/eventsClasses/IntField.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
-          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$PROJECT_DIR$/../itextpdf-5.5.13.jar!/com/itextpdf/text/DocumentException.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
           <folding />
         </state>
       </provider>
@@ -1419,159 +1660,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/MainMenu.fxml">
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/eventsClasses/ErrorLogger.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="248">
-          <caret line="41" column="20" lean-forward="false" selection-start-line="41" selection-start-column="20" selection-end-line="41" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/Settings.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-782">
-          <caret line="11" column="174" lean-forward="false" selection-start-line="11" selection-start-column="174" selection-end-line="11" selection-end-column="174" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/SettingsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-86">
-          <caret line="13" column="6" lean-forward="false" selection-start-line="13" selection-start-column="6" selection-end-line="13" selection-end-column="6" />
+        <state relative-caret-position="850">
+          <caret line="57" column="11" lean-forward="false" selection-start-line="57" selection-start-column="11" selection-end-line="57" selection-end-column="11" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/consoles/db/ea3e1e66-6190-4e47-bbc5-202652732b45/console.sql">
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/eventsClasses/HeaderFooterPageEvent.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/UserRecordsDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="753">
-          <caret line="216" column="0" lean-forward="false" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#initTableCells#0;class#MainMenuController#0" expanded="false" />
-            <element signature="method#add_btn_pressed#0;class#MainMenuController#0" expanded="false" />
-            <element signature="method#createImageCell#0;class#MainMenuController#0" expanded="false" />
-            <element signature="method#search_button_pressed#0;class#MainMenuController#0" expanded="false" />
-            <element signature="method#btn_add_filter_pressed#0;class#MainMenuController#0" expanded="false" />
-            <element signature="method#btn_apply_filters_pressed#0;class#MainMenuController#0" expanded="false" />
-            <element signature="method#btn_remove_filter_pressed#0;class#MainMenuController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/LoginMenuController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="518">
-          <caret line="40" column="33" lean-forward="false" selection-start-line="40" selection-start-column="33" selection-end-line="40" selection-end-column="33" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/GenerateCVController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="199" column="75" lean-forward="false" selection-start-line="199" selection-start-column="75" selection-end-line="199" selection-end-column="75" />
-          <folding>
-            <element signature="method#createTitle#0;class#GenerateCVController#0" expanded="false" />
-            <element signature="method#userDetails#0;class#GenerateCVController#0" expanded="false" />
-            <element signature="method#addParagraphAlignCenter#0;class#GenerateCVController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/FilterDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="577">
-          <caret line="65" column="31" lean-forward="false" selection-start-line="65" selection-start-column="31" selection-end-line="65" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/CertificationDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="54" column="26" lean-forward="false" selection-start-line="54" selection-start-column="26" selection-end-line="54" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/MasteryDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="70" column="18" lean-forward="true" selection-start-line="70" selection-start-column="18" selection-end-line="70" selection-end-column="18" />
-          <folding>
-            <element signature="e#1071#1072#0" expanded="true" />
-            <element signature="e#1102#1103#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/QualificationDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="55" column="26" lean-forward="false" selection-start-line="55" selection-start-column="26" selection-end-line="55" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/ReportDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="46" column="26" lean-forward="false" selection-start-line="46" selection-start-column="26" selection-end-line="46" selection-end-column="26" />
-          <folding>
-            <element signature="e#2034#2035#0" expanded="true" />
-            <element signature="e#2064#2065#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/UserBasicDetailsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-52">
-          <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/eventsClasses/IntField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="28" column="3" lean-forward="false" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+        <state relative-caret-position="203">
+          <caret line="102" column="48" lean-forward="false" selection-start-line="102" selection-start-column="48" selection-end-line="102" selection-end-column="48" />
           <folding />
         </state>
       </provider>

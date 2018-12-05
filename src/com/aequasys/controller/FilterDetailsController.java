@@ -1,5 +1,6 @@
 package com.aequasys.controller;
 
+import com.aequasys.eventsClasses.ErrorLogger;
 import com.aequasys.eventsClasses.IntField;
 import com.aequasys.model.dao.jdbc.JDBCFilterDao;
 import com.aequasys.model.dao.jdbc.JDBCMasteryDao;
@@ -21,6 +22,7 @@ public class FilterDetailsController implements Initializable{
     public Button masteries_add_btn;
     public Button masteries_delete_btn;
     public TextField textfield_add;
+
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {

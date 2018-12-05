@@ -1,5 +1,6 @@
 package com.aequasys.controller;
 
+import com.aequasys.eventsClasses.ErrorLogger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -12,6 +13,11 @@ import java.io.IOException;
 public class LoginMenuController {
     public Button btn_connect;
 
+    private void logError(Exception e){
+        ErrorLogger errorLogger = new ErrorLogger();
+        errorLogger.log(e);
+    }
+
     public void connect_btn_pressed(ActionEvent event) {
         FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/com/aequasys/view/MainMenu.fxml"));
         try {
@@ -23,7 +29,7 @@ public class LoginMenuController {
             closeWindow();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            logError(e);
         }
     }
 
@@ -39,7 +45,7 @@ public class LoginMenuController {
             stage.showAndWait();
 
         } catch (IOException e) {
-            e.printStackTrace();
+            logError(e);
         }
     }
 

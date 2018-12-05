@@ -1,6 +1,7 @@
 package com.aequasys.controller;
 
 import com.aequasys.eventsClasses.Column;
+import com.aequasys.eventsClasses.ErrorLogger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -65,6 +66,12 @@ public class UserRecordsDetailsController{
 
 
     private int user_id;
+
+    private void logError(Exception e){
+        ErrorLogger errorLogger = new ErrorLogger();
+        errorLogger.log(e);
+    }
+
 
     public void button_refresh_pressed(ActionEvent event) {
         refreshTable(certification_table);
@@ -170,7 +177,7 @@ public class UserRecordsDetailsController{
                 refreshTable(certification_table);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            logError(e);
         }
 
     }
@@ -203,7 +210,7 @@ public class UserRecordsDetailsController{
                     refreshTable(certification_table);
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                logError(e);
             }
         }
 
@@ -227,7 +234,7 @@ public class UserRecordsDetailsController{
                 refreshTable(qualifications_table);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            logError(e);
         }
 
     }
@@ -260,7 +267,7 @@ public class UserRecordsDetailsController{
                     refreshTable(qualifications_table);
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                logError(e);
             }
         }
 
@@ -284,7 +291,7 @@ public class UserRecordsDetailsController{
                 refreshTable(masteries_table);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            logError(e);
         }
     }
 
@@ -316,7 +323,7 @@ public class UserRecordsDetailsController{
                     refreshTable(masteries_table);
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                logError(e);
             }
         }
 
@@ -339,7 +346,7 @@ public class UserRecordsDetailsController{
                 refreshTable(reports_table);
             }
         } catch (IOException e) {
-            e.printStackTrace();
+            logError(e);
         }
     }
 
@@ -371,7 +378,7 @@ public class UserRecordsDetailsController{
                     refreshTable(reports_table);
                 }
             } catch (IOException e) {
-                e.printStackTrace();
+                logError(e);
             }
         }
 

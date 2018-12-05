@@ -1,5 +1,6 @@
 package com.aequasys.controller;
 
+import com.aequasys.eventsClasses.ErrorLogger;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -14,6 +15,11 @@ public class UserBasicDetailsController {
     public TextField surname_text;
     public TextField email_text;
     public TextField position_text;
+
+    private void logError(Exception e){
+        ErrorLogger errorLogger = new ErrorLogger();
+        errorLogger.log(e);
+    }
 
     int user_id;
     User user;
