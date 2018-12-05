@@ -25,19 +25,5 @@ public class Main extends Application {
     }
 }
 
-/*
-    TODONE: give user option to choose destination of CV
 
-    TODONE: give user option to choose last 5,4,3... etc years of experience
-
-    TODONE: filter users by masteries in MainMenu.fxml
-        -TODONE: maybe filter users by name and surname too
-        -TOSKIP: find SQL for multiple qualifications and code it in JDBCs
-        -TODONE: do filtering application side instead of server side
-
-    TODO: create new template, (optional: add icons for email and location)
-    TODO: create a menu where the user cna establish the connection with settings
-    TODONE: give user option to user another template
-
-    TODONE: fix crash on wrong IP
- */
+ //TODO: create new template, (optional: add icons for email and location)

@@ -10,29 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_8_0_13.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/com/aequasys/eventsClasses/IntField.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/CVgeneratorv0_2.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/CVgeneratorv0_2.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/ojdbc6.xml" afterPath="" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/CVgeneratorv0.2.iml" afterPath="$PROJECT_DIR$/CVgeneratorv0.2.iml" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/CertificationDetailsController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/CertificationDetailsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/FilterDetailsController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/FilterDetailsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/GenerateCVController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/GenerateCVController.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/LoginMenuController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/LoginMenuController.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/MasteryDetailsController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/MasteryDetailsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/QualificationDetailsController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/QualificationDetailsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/ReportDetailsController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/ReportDetailsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/SettingsController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/SettingsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/controller/UserRecordsDetailsController.java" afterPath="$PROJECT_DIR$/src/com/aequasys/controller/UserRecordsDetailsController.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/model/dao/connection/ConnectionFactory.java" afterPath="$PROJECT_DIR$/src/com/aequasys/model/dao/connection/ConnectionFactory.java" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/view/MainMenu.fxml" afterPath="$PROJECT_DIR$/src/com/aequasys/view/MainMenu.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/view/Settings.fxml" afterPath="$PROJECT_DIR$/src/com/aequasys/view/Settings.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/view/UserRecordsDetails.fxml" afterPath="$PROJECT_DIR$/src/com/aequasys/view/UserRecordsDetails.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/com/aequasys/view/loginMenu.fxml" afterPath="$PROJECT_DIR$/src/com/aequasys/view/loginMenu.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/com/aequasys/Main.java" afterPath="$PROJECT_DIR$/src/com/aequasys/Main.java" />
     </list>
     <ignored path="JavaFxApplication.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -141,25 +120,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="MainMenuController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/MainMenuController.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="753">
-              <caret line="216" column="0" lean-forward="false" selection-start-line="216" selection-start-column="0" selection-end-line="216" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#initTableCells#0;class#MainMenuController#0" expanded="false" />
-                <element signature="method#add_btn_pressed#0;class#MainMenuController#0" expanded="false" />
-                <element signature="method#createImageCell#0;class#MainMenuController#0" expanded="false" />
-                <element signature="method#search_button_pressed#0;class#MainMenuController#0" expanded="false" />
-                <element signature="method#btn_add_filter_pressed#0;class#MainMenuController#0" expanded="false" />
-                <element signature="method#btn_apply_filters_pressed#0;class#MainMenuController#0" expanded="false" />
-                <element signature="method#btn_remove_filter_pressed#0;class#MainMenuController#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="MasteryDetailsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/MasteryDetailsController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -219,6 +179,16 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/com/aequasys/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="408">
+              <caret line="28" column="3" lean-forward="false" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="FilterDetailsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/FilterDetailsController.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -229,7 +199,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserBasicDetailsController.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="UserBasicDetailsController.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/UserBasicDetailsController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-52">
@@ -239,12 +209,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserRecordsDetailsController.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/com/aequasys/controller/UserRecordsDetailsController.java">
+      <file leaf-file-name="IntField.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/com/aequasys/eventsClasses/IntField.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="281" column="0" lean-forward="false" selection-start-line="281" selection-start-column="0" selection-end-line="281" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="102">
+              <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -352,7 +324,6 @@
         <option value="$APPLICATION_CONFIG_DIR$/consoles/db/e2fbe587-8b0e-4c8f-8312-ae16892d2fde/console.sql" />
         <option value="$PROJECT_DIR$/src/com/aequasys/model/dao/jdbc/JDBCFilterDao.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/view/DetailsViews/FiltersDetails.fxml" />
-        <option value="$PROJECT_DIR$/src/com/aequasys/Main.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/view/loginMenu.fxml" />
         <option value="$PROJECT_DIR$/src/com/aequasys/controller/LoginMenuController.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/model/dao/connection/ConnectionFactory.java" />
@@ -366,6 +337,7 @@
         <option value="$PROJECT_DIR$/src/com/aequasys/controller/CertificationDetailsController.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/controller/QualificationDetailsController.java" />
         <option value="$PROJECT_DIR$/src/com/aequasys/controller/ReportDetailsController.java" />
+        <option value="$PROJECT_DIR$/src/com/aequasys/Main.java" />
       </list>
     </option>
   </component>
@@ -551,30 +523,6 @@
             <path>
               <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
               <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="artifacts" type="462c0819:PsiDirectoryNode" />
-              <item name="CVgeneratorv0_2" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
-              <item name="out" type="462c0819:PsiDirectoryNode" />
-              <item name="production" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -589,30 +537,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="com" type="462c0819:PsiDirectoryNode" />
               <item name="aequasys" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="aequasys" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="aequasys" type="462c0819:PsiDirectoryNode" />
-              <item name="eventsClasses" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cvgenerator0.3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="cvgenerator0.3" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="com" type="462c0819:PsiDirectoryNode" />
-              <item name="aequasys" type="462c0819:PsiDirectoryNode" />
-              <item name="view" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -871,7 +795,7 @@
       <workItem from="1542803277757" duration="1615000" />
       <workItem from="1543353240092" duration="22493000" />
       <workItem from="1543829851861" duration="4461000" />
-      <workItem from="1543917473303" duration="15709000" />
+      <workItem from="1543917473303" duration="16791000" />
     </task>
     <task id="LOCAL-00001" summary="Crud user working">
       <created>1540936599095</created>
@@ -1027,11 +951,18 @@
       <option name="project" value="LOCAL" />
       <updated>1543919755949</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="some exceptions fixed">
+      <created>1543971065409</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1543971065409</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="269302000" />
+    <option name="totallyTimeSpent" value="270384000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1169,7 +1100,8 @@
     <MESSAGE value="AFTER moving generator section to another dedicated window(working fine for now)" />
     <MESSAGE value="filters functional" />
     <MESSAGE value="filters functional more functionality and consistency" />
-    <option name="LAST_COMMIT_MESSAGE" value="filters functional more functionality and consistency" />
+    <MESSAGE value="some exceptions fixed" />
+    <option name="LAST_COMMIT_MESSAGE" value="some exceptions fixed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -1404,14 +1336,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="12" column="11" lean-forward="false" selection-start-line="12" selection-start-column="8" selection-end-line="16" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/com/aequasys/view/loginMenu.fxml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
@@ -1491,14 +1415,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/aequasys/eventsClasses/IntField.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="37" lean-forward="false" selection-start-line="2" selection-start-column="37" selection-end-line="2" selection-end-column="37" />
           <folding />
         </state>
       </provider>
@@ -1638,6 +1554,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-52">
           <caret line="36" column="4" lean-forward="false" selection-start-line="36" selection-start-column="4" selection-end-line="39" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/eventsClasses/IntField.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/com/aequasys/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="408">
+          <caret line="28" column="3" lean-forward="false" selection-start-line="28" selection-start-column="3" selection-end-line="28" selection-end-column="3" />
           <folding />
         </state>
       </provider>
