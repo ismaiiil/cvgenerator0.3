@@ -1,5 +1,6 @@
 package com.aequasys.controller;
 
+import com.aequasys.eventsClasses.IntField;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -25,24 +26,27 @@ public class ReportDetailsController {
             report_year_text.setText(String.valueOf(passedReport.getYear()));
             report_details_text.setText(passedReport.getDetails());
         }
-
+        IntField.convertToIntField(report_year_text);
     }
 
     private void commitReport(){
-        Report report = new Report();
-        report.setUser_id(passedReport.getUser_id());
-        report.setYear(Integer.parseInt(report_year_text.getText()));
-        report.setCountry(country_text.getText());
-        report.setDetails(report_details_text.getText());
-        JDBCReportDao jdbcReportDao = new JDBCReportDao();
-        if(passedReport.getId()==0){
-            jdbcReportDao.insert(report);
-        }else{
-            report.setId(passedReport.getId());
-            jdbcReportDao.update(report);
+        if(!report_year_text.getText().equals("")){
+            Report report = new Report();
+            report.setUser_id(passedReport.getUser_id());
+            report.setYear(Integer.parseInt(report_year_text.getText()));
+            report.setCountry(country_text.getText());
+            report.setDetails(report_details_text.getText());
+            JDBCReportDao jdbcReportDao = new JDBCReportDao();
+            if(passedReport.getId()==0){
+                jdbcReportDao.insert(report);
+            }else{
+                report.setId(passedReport.getId());
+                jdbcReportDao.update(report);
+            }
+            button_pressed=true;
+            closeWindow();
         }
-        button_pressed=true;
-        closeWindow();
+
     }
 
     private void closeWindow() {

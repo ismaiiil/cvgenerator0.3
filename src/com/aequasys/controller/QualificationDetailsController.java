@@ -1,5 +1,8 @@
 package com.aequasys.controller;
 
+import com.aequasys.eventsClasses.IntField;
+import javafx.beans.value.ChangeListener;
+import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
@@ -26,6 +29,8 @@ public class QualificationDetailsController {
             university_text.setText(passedQualification.getUniversity());
 
         }
+        // force the field to be numeric only
+        IntField.convertToIntField(year_text);
     }
 
     public void cancel_btn_pressed(ActionEvent event) {
@@ -34,20 +39,23 @@ public class QualificationDetailsController {
     }
 
     public void save_btn_pressed(ActionEvent event) {
-        Qualification qualification = new Qualification();
-        qualification.setUser_id(passedQualification.getUser_id());
-        qualification.setYear(Integer.parseInt(year_text.getText()));
-        qualification.setDiploma(qualification_text.getText());
-        qualification.setUniversity(university_text.getText());
-        JDBCQualificationDao jdbcQualificationDao = new JDBCQualificationDao();
-        if(passedQualification.getId() == 0){
-            jdbcQualificationDao.insert(qualification);
-        }else{
-            qualification.setId(passedQualification.getId());
-            jdbcQualificationDao.update(qualification);
+        if(!year_text.getText().equals("")){
+            Qualification qualification = new Qualification();
+            qualification.setUser_id(passedQualification.getUser_id());
+            qualification.setYear(Integer.parseInt(year_text.getText()));
+            qualification.setDiploma(qualification_text.getText());
+            qualification.setUniversity(university_text.getText());
+            JDBCQualificationDao jdbcQualificationDao = new JDBCQualificationDao();
+            if(passedQualification.getId() == 0){
+                jdbcQualificationDao.insert(qualification);
+            }else{
+                qualification.setId(passedQualification.getId());
+                jdbcQualificationDao.update(qualification);
+            }
+            button_pressed = true;
+            closeWindow();
         }
-        button_pressed = true;
-        closeWindow();
+
 
     }
     private void closeWindow() {

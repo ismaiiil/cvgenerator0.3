@@ -1,18 +1,18 @@
 package com.aequasys.controller;
 
+import com.aequasys.eventsClasses.IntField;
 import com.aequasys.model.dao.jdbc.JDBCFilterDao;
+import com.aequasys.model.dao.jdbc.JDBCMasteryDao;
 import com.aequasys.model.vo.Filter;
 import javafx.event.ActionEvent;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
-import javafx.scene.control.TableColumn;
-import javafx.scene.control.TableView;
-import javafx.scene.control.TextField;
+import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.control.cell.TextFieldTableCell;
 
 import javax.sql.rowset.JdbcRowSet;
 import java.net.URL;
+import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class FilterDetailsController implements Initializable{
@@ -30,6 +30,7 @@ public class FilterDetailsController implements Initializable{
         masteries_table.setEditable(true);
         masteries_column.setCellFactory(TextFieldTableCell.forTableColumn());
         refreshTable();
+
 
     }
 
@@ -52,11 +53,21 @@ public class FilterDetailsController implements Initializable{
 
     public void masteries_delete_btn_pressed(ActionEvent event) {
         Filter filter = (Filter) masteries_table.getSelectionModel().getSelectedItem();
+
         if(filter!=null){
-            JDBCFilterDao jdbcFilterDao = new JDBCFilterDao();
-            jdbcFilterDao.delete(filter.getId());
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Are sure you want to delete this filter?");
+            alert.setContentText("Delete? If users have this mastery, this may cause some bugs");
+            Optional<ButtonType> result = alert.showAndWait();
+
+            if ((result.isPresent()) && (result.get() == ButtonType.OK)) {
+                JDBCFilterDao jdbcFilterDao = new JDBCFilterDao();
+                jdbcFilterDao.delete(filter.getId());
+                refreshTable();
+            }
+
         }
-        refreshTable();
+
     }
 
     public void on_edit_commit_masteries(TableColumn.CellEditEvent cellEditEvent) {

@@ -36,7 +36,6 @@ public class MainMenuController implements Initializable {
     public Button edit_btn;
     public Button all_details_btn;
     public Button generate_cv_button;
-    public Button button_settings;
     public TextField name_search_box;
     public TextField surname_search_box;
     public ChoiceBox choicebox_masteries;
@@ -135,18 +134,21 @@ public class MainMenuController implements Initializable {
 
     public void delete_btn_pressed(ActionEvent event) {
         User user = (User) table_object.getSelectionModel().getSelectedItem();
-        Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
-        alert.setTitle("Are sure you want to delete this user?");
-        alert.setContentText("Delete? You will also lose all data related to this user.");
-        Optional<ButtonType> result = alert.showAndWait();
+        if (user !=null){
+            Alert alert = new Alert(Alert.AlertType.CONFIRMATION);
+            alert.setTitle("Are sure you want to delete this user?");
+            alert.setContentText("Delete? You will also lose all data related to this user.");
+            Optional<ButtonType> result = alert.showAndWait();
 
-        if ((result.isPresent()) && (result.get() == ButtonType.OK)) {
-            JDBCUserDao jdbcUserDao = new JDBCUserDao();
-            if(user != null){
-                jdbcUserDao.delete(user.getId());
-                refreshTable();
+            if ((result.isPresent()) && (result.get() == ButtonType.OK)) {
+                JDBCUserDao jdbcUserDao = new JDBCUserDao();
+                if(user != null){
+                    jdbcUserDao.delete(user.getId());
+                    refreshTable();
+                }
             }
         }
+
 
 
     }
@@ -227,22 +229,25 @@ public class MainMenuController implements Initializable {
 
     public void generate_cv_button_pressed(ActionEvent event) {
         User user = (User) table_object.getSelectionModel().getSelectedItem();
-        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/com/aequasys/view/generateCV.fxml"));
-        Parent root1 = null;
-        try {
-            root1 = (Parent) fxmlloader.load();
-            GenerateCVController generateCVController = fxmlloader.getController();
-            generateCVController.init_user(user);
-            Stage stage = new Stage();
-            stage.setTitle("Generate CV for user: "+ user.getName()+" "+ user.getSurname());
-            stage.setScene(new Scene(root1));
-            stage.showAndWait();
-            if(generateCVController.button_pressed){
-                refreshTable();
+        if (user != null ){
+            FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/com/aequasys/view/generateCV.fxml"));
+            Parent root1 = null;
+            try {
+                root1 = (Parent) fxmlloader.load();
+                GenerateCVController generateCVController = fxmlloader.getController();
+                generateCVController.init_user(user);
+                Stage stage = new Stage();
+                stage.setTitle("Generate CV for user: "+ user.getName()+" "+ user.getSurname());
+                stage.setScene(new Scene(root1));
+                stage.showAndWait();
+                if(generateCVController.button_pressed){
+                    refreshTable();
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+
     }
 
     public static PdfPCell createImageCell(String path) throws DocumentException, IOException {
@@ -251,21 +256,7 @@ public class MainMenuController implements Initializable {
         return cell;
     }
 
-    public void button_settings_pressed(ActionEvent event) {
-        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/com/aequasys/view/Settings.fxml"));
-        try {
-            Parent root2 = (Parent) fxmlloader.load();
-            SettingsController settingsController = fxmlloader.getController();
-            settingsController.init_data();
-            Stage stage = new Stage();
-            stage.setTitle("Connection settings");
-            stage.setScene(new Scene(root2));
-            stage.showAndWait();
 
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     public void search_button_pressed(ActionEvent event) {
         JDBCUserDao jdbcUserDao = new JDBCUserDao();

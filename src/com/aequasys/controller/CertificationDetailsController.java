@@ -1,5 +1,6 @@
 package com.aequasys.controller;
 
+import com.aequasys.eventsClasses.IntField;
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextArea;
@@ -34,22 +35,26 @@ public class CertificationDetailsController {
             year_text.setText(String.valueOf(passedCertification.getYear()));
             certification_text.setText(certification.getQualification());
         }
+        IntField.convertToIntField(year_text);
     }
 
     public void commitCertification(){
-        Certification certification = new Certification();
-        certification.setUser_id(passedCertification.getUser_id());
-        certification.setYear(Integer.parseInt(year_text.getText()));
-        certification.setQualification(certification_text.getText());
-        JDBCCertificationDao jdbcCertificationDao = new JDBCCertificationDao();
-        if(passedCertification.getId() == 0){
-            jdbcCertificationDao.insert(certification);
-        }else{
-            certification.setId(passedCertification.getId());
-            jdbcCertificationDao.update(certification);
+        if(!year_text.getText().equals("")){
+            Certification certification = new Certification();
+            certification.setUser_id(passedCertification.getUser_id());
+            certification.setYear(Integer.parseInt(year_text.getText()));
+            certification.setQualification(certification_text.getText());
+            JDBCCertificationDao jdbcCertificationDao = new JDBCCertificationDao();
+            if(passedCertification.getId() == 0){
+                jdbcCertificationDao.insert(certification);
+            }else{
+                certification.setId(passedCertification.getId());
+                jdbcCertificationDao.update(certification);
+            }
+            button_pressed = true;
+            closeWindow();
         }
-        button_pressed = true;
-        closeWindow();
+
     }
     private void closeWindow() {
         Stage stage = (Stage) cancel_btn.getScene().getWindow();

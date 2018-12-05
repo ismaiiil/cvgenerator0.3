@@ -97,11 +97,6 @@
                         <Insets right="15.0" top="15.0" />
                      </HBox.margin>
                   </Button>
-                  <Button fx:id="button_settings" layoutX="546.0" layoutY="25.0" mnemonicParsing="false" onAction="#button_settings_pressed" prefHeight="25.0" prefWidth="66.0" text="Settings">
-                     <HBox.margin>
-                        <Insets right="15.0" top="15.0" />
-                     </HBox.margin>
-                  </Button>
                </children>
             </HBox>
             <HBox prefHeight="100.0" prefWidth="200.0">

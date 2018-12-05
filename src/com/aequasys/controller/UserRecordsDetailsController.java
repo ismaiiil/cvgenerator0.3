@@ -177,30 +177,36 @@ public class UserRecordsDetailsController{
 
     public void certification_delete_btn_pressed(ActionEvent event) {
         Certification certification = (Certification) certification_table.getSelectionModel().getSelectedItem();
-        JDBCCertificationDao jdbcCertificationDao = new JDBCCertificationDao();
-        jdbcCertificationDao.delete(certification.getId());
-        refreshTable(certification_table);
+        if(certification!=null){
+            JDBCCertificationDao jdbcCertificationDao = new JDBCCertificationDao();
+            jdbcCertificationDao.delete(certification.getId());
+            refreshTable(certification_table);
+        }
+
     }
 
     public void certification_edit_btn_pressed(ActionEvent event) {
         Certification certification = (Certification) certification_table.getSelectionModel().getSelectedItem();
-        certification.setUser_id(user_id);
-        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/com/aequasys/view/DetailsViews/CertificationDetails.fxml"));
-        try {
-            Parent root2 = (Parent) fxmlloader.load();
-            CertificationDetailsController certificationDetailsController = fxmlloader.getController();
-            certificationDetailsController.init_certification(certification);
-            Stage stage = new Stage();
-            stage.setTitle("editing certification:");
-            stage.setScene(new Scene(root2));
-            //stage.setResizable(false);
-            stage.showAndWait();
-            if(certificationDetailsController.button_pressed){
-                refreshTable(certification_table);
+        if(certification!=null){
+            certification.setUser_id(user_id);
+            FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/com/aequasys/view/DetailsViews/CertificationDetails.fxml"));
+            try {
+                Parent root2 = (Parent) fxmlloader.load();
+                CertificationDetailsController certificationDetailsController = fxmlloader.getController();
+                certificationDetailsController.init_certification(certification);
+                Stage stage = new Stage();
+                stage.setTitle("editing certification:");
+                stage.setScene(new Scene(root2));
+                //stage.setResizable(false);
+                stage.showAndWait();
+                if(certificationDetailsController.button_pressed){
+                    refreshTable(certification_table);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+
 
     }
 
@@ -228,30 +234,36 @@ public class UserRecordsDetailsController{
 
     public void qualification_delete_btn_pressed(ActionEvent event) {
         Qualification qualification = (Qualification) qualifications_table.getSelectionModel().getSelectedItem();
-        JDBCQualificationDao jdbcQualificationDao = new JDBCQualificationDao();
-        jdbcQualificationDao.delete(qualification.getId());
-        refreshTable(qualifications_table);
+        if(qualification!=null){
+            JDBCQualificationDao jdbcQualificationDao = new JDBCQualificationDao();
+            jdbcQualificationDao.delete(qualification.getId());
+            refreshTable(qualifications_table);
+        }
+
     }
 
     public void qualification_edit_btn_pressed(ActionEvent event) {
         Qualification qualification = (Qualification) qualifications_table.getSelectionModel().getSelectedItem();
-        qualification.setUser_id(user_id);
-        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/com/aequasys/view/DetailsViews/QualificationDetails.fxml"));
-        try {
-            Parent root2 = (Parent) fxmlloader.load();
-            QualificationDetailsController qualificationDetailsController = fxmlloader.getController();
-            qualificationDetailsController.init_qualification(qualification);
-            Stage stage = new Stage();
-            stage.setTitle("Editing a qualification:");
-            stage.setScene(new Scene(root2));
-            //stage.setResizable(false);
-            stage.showAndWait();
-            if(qualificationDetailsController.button_pressed){
-                refreshTable(qualifications_table);
+        if(qualification != null){
+            qualification.setUser_id(user_id);
+            FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/com/aequasys/view/DetailsViews/QualificationDetails.fxml"));
+            try {
+                Parent root2 = (Parent) fxmlloader.load();
+                QualificationDetailsController qualificationDetailsController = fxmlloader.getController();
+                qualificationDetailsController.init_qualification(qualification);
+                Stage stage = new Stage();
+                stage.setTitle("Editing a qualification:");
+                stage.setScene(new Scene(root2));
+                //stage.setResizable(false);
+                stage.showAndWait();
+                if(qualificationDetailsController.button_pressed){
+                    refreshTable(qualifications_table);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+
 
     }
 
@@ -278,30 +290,36 @@ public class UserRecordsDetailsController{
 
     public void masteries_delete_btn_pressed(ActionEvent event) {
         Mastery mastery = (Mastery) masteries_table.getSelectionModel().getSelectedItem();
-        JDBCMasteryDao jdbcMasteryDao = new JDBCMasteryDao();
-        jdbcMasteryDao.delete(mastery.getId());
-        refreshTable(masteries_table);
+        if(mastery != null){
+            JDBCMasteryDao jdbcMasteryDao = new JDBCMasteryDao();
+            jdbcMasteryDao.delete(mastery.getId());
+            refreshTable(masteries_table);
+        }
+
     }
 
     public void masteries_edit_btn_pressed(ActionEvent event) {
         Mastery mastery = (Mastery) masteries_table.getSelectionModel().getSelectedItem();
-        mastery.setUser_id(user_id);
-        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/com/aequasys/view/DetailsViews/MasteryDetails.fxml"));
-        try {
-            Parent root2 = (Parent) fxmlloader.load();
-            MasteryDetailsController masteryDetailsController = fxmlloader.getController();
-            masteryDetailsController.init_mastery(mastery);
-            Stage stage = new Stage();
-            stage.setTitle("editing mastery:");
-            stage.setScene(new Scene(root2));
-            //stage.setResizable(false);
-            stage.showAndWait();
-            if(masteryDetailsController.button_pressed){
-                refreshTable(masteries_table);
+        if(mastery != null){
+            mastery.setUser_id(user_id);
+            FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/com/aequasys/view/DetailsViews/MasteryDetails.fxml"));
+            try {
+                Parent root2 = (Parent) fxmlloader.load();
+                MasteryDetailsController masteryDetailsController = fxmlloader.getController();
+                masteryDetailsController.init_mastery(mastery);
+                Stage stage = new Stage();
+                stage.setTitle("editing mastery:");
+                stage.setScene(new Scene(root2));
+                //stage.setResizable(false);
+                stage.showAndWait();
+                if(masteryDetailsController.button_pressed){
+                    refreshTable(masteries_table);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+
     }
 
     public void report_add_btn_pressed(ActionEvent event) {
@@ -327,30 +345,36 @@ public class UserRecordsDetailsController{
 
     public void report_delete_btn_pressed(ActionEvent event) {
         Report report = (Report) reports_table.getSelectionModel().getSelectedItem();
-        JDBCReportDao jdbcReportDao = new JDBCReportDao();
-        jdbcReportDao.delete(report.getId());
-        refreshTable(reports_table);
+        if(report!=null){
+            JDBCReportDao jdbcReportDao = new JDBCReportDao();
+            jdbcReportDao.delete(report.getId());
+            refreshTable(reports_table);
+        }
+
     }
 
     public void report_edit_btn_pressed(ActionEvent event) {
         Report report = (Report) reports_table.getSelectionModel().getSelectedItem();
-        report.setUser_id(user_id);
-        FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/com/aequasys/view/DetailsViews/ReportDetails.fxml"));
-        try {
-            Parent root2 = (Parent) fxmlloader.load();
-            ReportDetailsController reportDetailsController = fxmlloader.getController();
-            reportDetailsController.init_report(report);
-            Stage stage = new Stage();
-            stage.setTitle("editing a report:");
-            stage.setScene(new Scene(root2));
-            //stage.setResizable(false);
-            stage.showAndWait();
-            if(reportDetailsController.button_pressed){
-                refreshTable(reports_table);
+        if(report!=null){
+            report.setUser_id(user_id);
+            FXMLLoader fxmlloader = new FXMLLoader(getClass().getResource("/com/aequasys/view/DetailsViews/ReportDetails.fxml"));
+            try {
+                Parent root2 = (Parent) fxmlloader.load();
+                ReportDetailsController reportDetailsController = fxmlloader.getController();
+                reportDetailsController.init_report(report);
+                Stage stage = new Stage();
+                stage.setTitle("editing a report:");
+                stage.setScene(new Scene(root2));
+                //stage.setResizable(false);
+                stage.showAndWait();
+                if(reportDetailsController.button_pressed){
+                    refreshTable(reports_table);
+                }
+            } catch (IOException e) {
+                e.printStackTrace();
             }
-        } catch (IOException e) {
-            e.printStackTrace();
         }
+
     }
 
     public void finish_button_pressed(ActionEvent event) {

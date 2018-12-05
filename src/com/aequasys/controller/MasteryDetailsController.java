@@ -1,5 +1,6 @@
 package com.aequasys.controller;
 
+import com.aequasys.eventsClasses.IntField;
 import com.aequasys.model.dao.jdbc.JDBCFilterDao;
 import com.aequasys.model.vo.Filter;
 import javafx.collections.FXCollections;
@@ -44,6 +45,7 @@ public class MasteryDetailsController {
             years_text.setText(String.valueOf(passedMastery.getExperience()));
             choicebox_mastery.setValue(passedMastery.getTechnology());
         }
+        IntField.convertToIntField(years_text);
     }
 
     private void resetChoicebox() {
@@ -54,22 +56,26 @@ public class MasteryDetailsController {
             filters.add(filter.getMastery());
         }
         choicebox_mastery.setItems(filters);
+        choicebox_mastery.getSelectionModel().selectFirst();
     }
 
     private void commitMastery(){
-        Mastery mastery = new Mastery();
-        mastery.setUser_id(passedMastery.getUser_id());
-        mastery.setExperience(Integer.parseInt(years_text.getText()));
-        mastery.setTechnology(choicebox_mastery.getValue().toString());
-        JDBCMasteryDao jdbcMasteryDao = new JDBCMasteryDao();
-        if(passedMastery.getId()==0){
-            jdbcMasteryDao.insert(mastery);
-        }else{
-            mastery.setId(passedMastery.getId());
-            jdbcMasteryDao.update(mastery);
+        if(choicebox_mastery.getValue() != null && !years_text.getText().equals("") ){
+            Mastery mastery = new Mastery();
+            mastery.setUser_id(passedMastery.getUser_id());
+            mastery.setExperience(Integer.parseInt(years_text.getText()));
+            mastery.setTechnology(choicebox_mastery.getValue().toString());
+            JDBCMasteryDao jdbcMasteryDao = new JDBCMasteryDao();
+            if(passedMastery.getId()==0){
+                jdbcMasteryDao.insert(mastery);
+            }else{
+                mastery.setId(passedMastery.getId());
+                jdbcMasteryDao.update(mastery);
+            }
+            button_pressed = true;
+            closeWindow();
         }
-        button_pressed = true;
-        closeWindow();
+
     }
 
     private void closeWindow(){

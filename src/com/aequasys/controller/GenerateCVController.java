@@ -1,6 +1,7 @@
 package com.aequasys.controller;
 
 import com.aequasys.eventsClasses.HeaderFooterPageEvent;
+import com.aequasys.eventsClasses.IntField;
 import com.aequasys.model.dao.jdbc.JDBCCertificationDao;
 import com.aequasys.model.dao.jdbc.JDBCMasteryDao;
 import com.aequasys.model.dao.jdbc.JDBCQualificationDao;
@@ -38,11 +39,13 @@ public class GenerateCVController {
 
     public void init_user(User user){
         user_selected = user;
+        IntField.convertToIntField(years_textfield);
         years_textfield.setText("5");
         listofTemplates.add("template 1");
         listofTemplates.add("template 2");
         choiceBox.setItems(listofTemplates);
         choiceBox.setValue("template 1");
+
 
     }
 
@@ -183,16 +186,18 @@ public class GenerateCVController {
                 qualificationTable.setWidths(new int[]{1, 8});
 
                 //qualification table headers
-                addTextCell(qualificationTable,"Year",BaseColor.GRAY,Element.ALIGN_CENTER,bold_font(10));
-                addTextCell(qualificationTable,"Qualification/Diploma",BaseColor.GRAY,Element.ALIGN_CENTER,bold_font(10));
+                addTextCell(qualificationTable,"Year",BaseColor.GRAY,Element.ALIGN_BOTTOM,bold_font(10));
+                addTextCell(qualificationTable,"Qualification/Diploma",BaseColor.GRAY,Element.ALIGN_TOP,bold_font(10));
 
                 //qualification add data
                 JDBCQualificationDao jdbcQualificationDao = new JDBCQualificationDao();
                 for (Qualification qualification:jdbcQualificationDao.select(user.getId())){
-                    addTextCell(qualificationTable,String.valueOf(qualification.getYear()),BaseColor.WHITE,Element.ALIGN_CENTER,normal_font(9));
+                    addTextCell(qualificationTable,String.valueOf("\n"+qualification.getYear()),BaseColor.WHITE,Element.ALIGN_CENTER,normal_font(9));
                     PdfPCell diplomaCell = new PdfPCell();
                     diplomaCell.addElement(new Paragraph(qualification.getDiploma(),bold_font(9)));
                     diplomaCell.addElement(new Paragraph(qualification.getUniversity(),normal_font(9)));
+                    diplomaCell.setVerticalAlignment(Element.ALIGN_CENTER);
+                    diplomaCell.setHorizontalAlignment(Element.ALIGN_CENTER);
                     qualificationTable.addCell(diplomaCell);
                 }
                 //IMPORTANT moving this will cause tables to be placed at the wrong position

@@ -19,7 +19,7 @@
         </element>
       </element>
       <element id="library" level="project" name="itextpdf-5.5.13" />
-      <element id="library" level="project" name="ojdbc6" />
+      <element id="library" level="project" name="mysql-connector-java-8.0.13" />
     </root>
   </artifact>
 </component>

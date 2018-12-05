@@ -11,5 +11,25 @@
       <user-name>test</user-name>
       <introspection-schemas>*:TEST</introspection-schemas>
     </data-source>
+    <data-source name="TEST@192.168.1.82" uuid="ae5de30b-0197-4377-8d55-96a3cd1a7c18">
+      <database-info product="MySQL" version="5.7.24-0ubuntu0.16.04.1" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="exact" quoted-identifiers="exact" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>username</user-name>
+      <introspection-schemas>*:TEST</introspection-schemas>
+    </data-source>
+    <data-source name="TEST@localhost" uuid="ea3e1e66-6190-4e47-bbc5-202652732b45">
+      <database-info product="MySQL" version="5.5.49-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.46 ( Revision: 9cc87a48e75c2d2e87c1a293b2862ce651cb256e )">
+        <extra-name-characters>#@</extra-name-characters>
+        <identifier-quote-string>`</identifier-quote-string>
+      </database-info>
+      <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower" />
+      <secret-storage>master_key</secret-storage>
+      <user-name>root</user-name>
+      <introspection-schemas>*:test</introspection-schemas>
+    </data-source>
   </component>
 </project>

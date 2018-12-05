@@ -9,7 +9,7 @@
    <center>
       <HBox prefHeight="100.0" prefWidth="200.0">
          <children>
-            <Button mnemonicParsing="false" onAction="#connect_btn_pressed" text="Connect" textFill="RED">
+            <Button fx:id="btn_connect" mnemonicParsing="false" onAction="#connect_btn_pressed" text="Connect" textFill="RED">
                <HBox.margin>
                   <Insets left="150.0" top="76.0" />
                </HBox.margin>
